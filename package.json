@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "setup-db": "node server/setup-database.js",
     "start": "node server/index.js",
-    "vercel-build": "npm run setup-db && npm run build"
+    "vercel-build": "npm run setup-db && tsc && vite build"
   },
   "dependencies": {
     "cors": "^2.8.5",
