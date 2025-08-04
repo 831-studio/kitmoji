@@ -4,6 +4,25 @@ const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const path = require('path');
 
+function unicodeToEmoji(unicode) {
+  try {
+    const codepoints = unicode.split(' ').filter(cp => cp.trim());
+    let emoji = '';
+    for (const codepoint of codepoints) {
+      const cleanCodepoint = codepoint.trim().toUpperCase();
+      if (cleanCodepoint && cleanCodepoint !== 'FE0F') {
+        const code = parseInt(cleanCodepoint, 16);
+        if (code && code > 0) {
+          emoji += String.fromCodePoint(code);
+        }
+      }
+    }
+    return emoji || '❓';
+  } catch (error) {
+    return '❓';
+  }
+}
+
 async function setupVercelPostgres() {
   console.log('🚀 Setting up Vercel Postgres for Kitmoji...');
   
@@ -76,17 +95,20 @@ async function setupVercelPostgres() {
       return;
     }
     
-    // Insert emojis in batches
+    // Insert emojis in batches with proper Unicode conversion
     let migrated = 0;
     for (const emoji of emojis) {
       try {
+        // Generate correct emoji character from unicode
+        const correctEmoji = unicodeToEmoji(emoji.unicode);
+        
         await sql`
           INSERT INTO emojis (
             emoji, name, keywords, category, subcategory, 
             unicode, unicode_version, status, emoji_type, 
             base_unicode, has_variations, skin_tone, hair_style
           ) VALUES (
-            ${emoji.emoji}, ${emoji.name}, ${emoji.keywords || ''}, 
+            ${correctEmoji}, ${emoji.name}, ${emoji.keywords || ''}, 
             ${emoji.category}, ${emoji.subcategory || ''}, 
             ${emoji.unicode}, ${emoji.unicode_version || 'unknown'}, 
             ${emoji.status || 'fully-qualified'}, ${emoji.emoji_type || 'standard'}, 
