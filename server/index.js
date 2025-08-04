@@ -162,9 +162,24 @@ app.delete('/api/emojis/:id', (req, res) => {
 });
 
 
-// Health check
+// Health check with database info
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Kitmoji API is running' });
+  db.get('SELECT COUNT(*) as total FROM emojis', (err, row) => {
+    if (err) {
+      res.json({ 
+        status: 'ERROR', 
+        message: 'Database error',
+        error: err.message 
+      });
+    } else {
+      res.json({ 
+        status: 'OK', 
+        message: 'Kitmoji API is running',
+        totalEmojis: row ? row.total : 'unknown',
+        databasePath: dbPath
+      });
+    }
+  });
 });
 
 app.listen(PORT, () => {
