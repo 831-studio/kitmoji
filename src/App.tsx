@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Unicode from './pages/Unicode'
@@ -19,6 +20,7 @@ function App() {
           <Route path="/unicode" element={<Unicode />} />
         </Routes>
       </motion.main>
+      <Analytics />
     </div>
   )
 }
