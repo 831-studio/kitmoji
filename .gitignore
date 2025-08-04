@@ -44,8 +44,8 @@ pids
 # Coverage directory used by tools like istanbul
 coverage/
 
-# Database
-server/emojis.db
+# Database (commented out for deployment)
+# server/emojis.db
 
 # Temporary files
 *.tmp
