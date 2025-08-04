@@ -12,7 +12,7 @@
       "src": "server/index.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": "emojis.db"
+        "includeFiles": ["emojis.db", "kitmoji-emojis.db"]
       }
     }
   ],

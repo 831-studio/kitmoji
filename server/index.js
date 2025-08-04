@@ -10,8 +10,29 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-// Database connection with debugging - try root level
-const dbPath = path.join(__dirname, '..', 'emojis.db');
+// Database connection with debugging - try multiple paths including new DB name
+let dbPath;
+const possiblePaths = [
+  path.join(__dirname, 'emojis.db'),           // server/emojis.db
+  path.join(__dirname, '..', 'emojis.db'),     // ./emojis.db
+  path.join(__dirname, '..', 'kitmoji-emojis.db'), // ./kitmoji-emojis.db (new)
+  path.join(process.cwd(), 'kitmoji-emojis.db'),   // process root (new)
+  path.join(process.cwd(), 'emojis.db'),       // process root
+  path.join(process.cwd(), 'server', 'emojis.db'), // process root + server
+];
+
+for (const testPath of possiblePaths) {
+  console.log(`Testing path ${testPath}: exists=${require('fs').existsSync(testPath)}`);
+  if (require('fs').existsSync(testPath)) {
+    dbPath = testPath;
+    break;
+  }
+}
+
+if (!dbPath) {
+  console.error('No database file found at any expected location!');
+  dbPath = possiblePaths[0]; // fallback
+}
 console.log('Database path:', dbPath);
 console.log('Database exists:', require('fs').existsSync(dbPath));
 if (require('fs').existsSync(dbPath)) {
