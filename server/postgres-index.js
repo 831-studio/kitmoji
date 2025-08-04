@@ -17,7 +17,7 @@ app.get('/api/health', async (req, res) => {
     
     res.json({ 
       status: 'OK', 
-      message: 'Kitmoji API running with Postgres',
+      message: 'Kitmoji API running with Postgres - Ready!',
       totalEmojis: parseInt(totalEmojis),
       database: 'Vercel Postgres'
     });
