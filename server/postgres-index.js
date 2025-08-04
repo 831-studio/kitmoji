@@ -203,8 +203,8 @@ app.delete('/api/emojis/:id', async (req, res) => {
   }
 });
 
-// Fix emoji encoding
-app.post('/api/fix-emojis', async (req, res) => {
+// Fix emoji encoding (GET version for easy browser access)
+app.get('/api/fix-emojis', async (req, res) => {
   try {
     console.log('🔧 Starting emoji encoding fix...');
     
