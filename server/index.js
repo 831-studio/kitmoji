@@ -10,9 +10,23 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-// Database connection
-const dbPath = path.join(__dirname, 'emojis.db');
-const db = new sqlite3.Database(dbPath);
+// Database connection with debugging - try root level
+const dbPath = path.join(__dirname, '..', 'emojis.db');
+console.log('Database path:', dbPath);
+console.log('Database exists:', require('fs').existsSync(dbPath));
+if (require('fs').existsSync(dbPath)) {
+  const stats = require('fs').statSync(dbPath);
+  console.log('Database size:', stats.size, 'bytes');
+  console.log('Database modified:', stats.mtime);
+}
+
+const db = new sqlite3.Database(dbPath, (err) => {
+  if (err) {
+    console.error('Database connection error:', err.message);
+  } else {
+    console.log('Database connected successfully');
+  }
+});
 
 // Routes
 // Get popular emojis (most commonly used) - MUST be before /api/emojis/:id
