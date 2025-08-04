@@ -29,7 +29,7 @@ const Unicode = () => {
         ...(selectedCategory !== 'all' && { category: selectedCategory })
       })
 
-      const response = await fetch(`http://localhost:3001/api/emojis?${params}`)
+      const response = await fetch(`/api/emojis?${params}`)
       const data: EmojiResponse = await response.json()
 
       if (reset || pageNum === 1) {
@@ -50,7 +50,7 @@ const Unicode = () => {
 
   const fetchCategories = useCallback(async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/categories')
+      const response = await fetch('/api/categories')
       const data = await response.json()
       setCategories(data)
     } catch (error) {

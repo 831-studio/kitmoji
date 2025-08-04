@@ -30,7 +30,7 @@ const Home = () => {
         ...(selectedCategory !== 'all' && { category: selectedCategory })
       })
 
-      const response = await fetch(`http://localhost:3001/api/emojis?${params}`)
+      const response = await fetch(`/api/emojis?${params}`)
       const data: EmojiResponse = await response.json()
 
       if (reset || pageNum === 1) {
@@ -51,7 +51,7 @@ const Home = () => {
 
   const fetchCategories = useCallback(async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/categories')
+      const response = await fetch('/api/categories')
       const data = await response.json()
       setCategories(data)
     } catch (error) {
@@ -62,7 +62,7 @@ const Home = () => {
   const fetchPopularEmojis = useCallback(async () => {
     try {
       setPopularLoading(true)
-      const response = await fetch('http://localhost:3001/api/emojis/popular')
+      const response = await fetch('/api/emojis/popular')
       const data: Emoji[] = await response.json()
       setPopularEmojis(data)
     } catch (error) {
