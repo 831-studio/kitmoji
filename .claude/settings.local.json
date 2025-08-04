@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(npx tailwindcss init:*)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(ls:*)",
+      "Bash(sqlite3:*)",
+      "Bash(curl:*)",
+      "Bash(kill:*)"
+    ],
+    "deny": []
+  }
+}

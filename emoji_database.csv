@@ -1,0 +1,691 @@
+emoji,name,keywords,category,unicode
+😀,grinning face,happy;smile;grin;joy,Smileys & People,U+1F600
+😃,grinning face with big eyes,happy;smile;grin;joy;excited,Smileys & People,U+1F603
+😄,grinning face with smiling eyes,happy;smile;grin;joy;laugh,Smileys & People,U+1F604
+😁,beaming face with smiling eyes,happy;smile;grin;joy;beam,Smileys & People,U+1F601
+😆,grinning squinting face,happy;smile;laugh;joy;squint,Smileys & People,U+1F606
+😅,grinning face with sweat,happy;smile;sweat;relief;phew,Smileys & People,U+1F605
+🤣,rolling on the floor laughing,laugh;rofl;funny;hilarious,Smileys & People,U+1F923
+😂,face with tears of joy,laugh;cry;tears;joy;funny;lol,Smileys & People,U+1F602
+🙂,slightly smiling face,smile;happy;content,Smileys & People,U+1F642
+🙃,upside-down face,silly;sarcastic;upside down,Smileys & People,U+1F643
+🫠,melting face,melt;hot;embarrassed;disappear,Smileys & People,U+1FAE0
+😊,smiling face with smiling eyes,happy;smile;blush;pleased,Smileys & People,U+1F60A
+😇,smiling face with halo,angel;innocent;halo;good,Smileys & People,U+1F607
+🥰,smiling face with hearts,love;heart;affection;cute,Smileys & People,U+1F970
+😍,smiling face with heart-eyes,love;heart;crush;adore,Smileys & People,U+1F60D
+🤩,star-struck,star;amazed;excited;celebrity,Smileys & People,U+1F929
+😘,face blowing a kiss,kiss;love;romance,Smileys & People,U+1F618
+😗,kissing face,kiss;love;romance,Smileys & People,U+1F617
+☺️,smiling face,smile;happy;content;blush,Smileys & People,U+263A U+FE0F
+😚,kissing face with closed eyes,kiss;love;romance;peaceful,Smileys & People,U+1F61A
+😙,kissing face with smiling eyes,kiss;love;romance;happy,Smileys & People,U+1F619
+🥲,smiling face with tear,proud;grateful;touched;relieved,Smileys & People,U+1F972
+😋,face savoring food,yum;delicious;food;tasty,Smileys & People,U+1F60B
+😛,face with tongue,tongue;silly;playful,Smileys & People,U+1F61B
+😜,winking face with tongue,tongue;wink;silly;playful,Smileys & People,U+1F61C
+🤪,zany face,crazy;wild;silly;goofy,Smileys & People,U+1F92A
+😝,squinting face with tongue,tongue;silly;playful;tease,Smileys & People,U+1F61D
+🤑,money-mouth face,money;rich;dollar;cash,Smileys & People,U+1F911
+🤗,smiling face with open hands,hug;embrace;love,Smileys & People,U+1F917
+🤭,face with hand over mouth,oops;surprise;giggle,Smileys & People,U+1F92D
+🫢,face with open eyes and hand over mouth,gasp;shock;surprise,Smileys & People,U+1FAE2
+🫣,face with peeking eye,peek;shy;embarrassed,Smileys & People,U+1FAE3
+🤫,shushing face,quiet;shush;secret,Smileys & People,U+1F92B
+🤔,thinking face,think;ponder;consider,Smileys & People,U+1F914
+🫡,saluting face,salute;respect;military,Smileys & People,U+1FAE1
+🤐,zipper-mouth face,quiet;secret;zip,Smileys & People,U+1F910
+🤨,face with raised eyebrow,suspicious;skeptical;questioning,Smileys & People,U+1F928
+😐,neutral face,neutral;blank;meh,Smileys & People,U+1F610
+😑,expressionless face,blank;deadpan;meh,Smileys & People,U+1F611
+😶,face without mouth,speechless;silent;mute,Smileys & People,U+1F636
+🫥,dotted line face,invisible;depressed;disappear,Smileys & People,U+1FAE5
+😏,smirking face,smirk;sly;mischievous,Smileys & People,U+1F60F
+😒,unamused face,annoyed;bored;unimpressed,Smileys & People,U+1F612
+🙄,face with rolling eyes,eye roll;annoyed;whatever,Smileys & People,U+1F644
+😬,grimacing face,grimace;awkward;oops,Smileys & People,U+1F62C
+😮‍💨,face exhaling,sigh;relief;tired,Smileys & People,U+1F62E U+200D U+1F4A8
+🤥,lying face,lie;liar;pinocchio,Smileys & People,U+1F925
+🫨,shaking face,shake;shock;earthquake,Smileys & People,U+1FAE8
+🙂‍↔️,head shaking horizontally,no;nope;disagree,Smileys & People,U+1F642 U+200D U+2194 U+FE0F
+🙂‍↕️,head shaking vertically,yes;nod;agree,Smileys & People,U+1F642 U+200D U+2195 U+FE0F
+😌,relieved face,relief;calm;peaceful,Smileys & People,U+1F60C
+😔,pensive face,sad;thoughtful;pensive,Smileys & People,U+1F614
+😪,sleepy face,sleepy;tired;drowsy,Smileys & People,U+1F62A
+🤤,drooling face,drool;hungry;desire,Smileys & People,U+1F924
+😴,sleeping face,sleep;tired;zzz,Smileys & People,U+1F634
+😷,face with medical mask,mask;sick;doctor,Smileys & People,U+1F637
+🤒,face with thermometer,sick;fever;ill,Smileys & People,U+1F912
+🤕,face with head-bandage,hurt;injured;bandage,Smileys & People,U+1F915
+🤢,nauseated face,sick;nausea;gross,Smileys & People,U+1F922
+🤮,face vomiting,vomit;sick;puke,Smileys & People,U+1F92E
+🤧,sneezing face,sneeze;sick;achoo,Smileys & People,U+1F927
+🥵,hot face,hot;heat;sweat,Smileys & People,U+1F975
+🥶,cold face,cold;freezing;frozen,Smileys & People,U+1F976
+🥴,woozy face,dizzy;drunk;woozy,Smileys & People,U+1F974
+😵,face with crossed-out eyes,dizzy;confused;knocked out,Smileys & People,U+1F635
+😵‍💫,face with spiral eyes,dizzy;hypnotized;trouble,Smileys & People,U+1F635 U+200D U+1F4AB
+🤯,exploding head,mind blown;shocked;amazed,Smileys & People,U+1F92F
+🤠,cowboy hat face,cowboy;hat;western,Smileys & People,U+1F920
+🥳,partying face,party;celebration;birthday;fun,Smileys & People,U+1F973
+🥸,disguised face,disguise;incognito;secret,Smileys & People,U+1F978
+😎,smiling face with sunglasses,cool;sunglasses;awesome,Smileys & People,U+1F60E
+🤓,nerd face,nerd;geek;smart;glasses,Smileys & People,U+1F913
+🧐,face with monocle,fancy;sophisticated;curious,Smileys & People,U+1F9D0
+😕,confused face,confused;puzzled;uncertain,Smileys & People,U+1F615
+🫤,face with diagonal mouth,meh;unsure;skeptical,Smileys & People,U+1FAE4
+😟,worried face,worried;concerned;anxious,Smileys & People,U+1F61F
+🙁,slightly frowning face,sad;frown;disappointed,Smileys & People,U+1F641
+☹️,frowning face,sad;frown;unhappy,Smileys & People,U+2639 U+FE0F
+😮,face with open mouth,surprised;wow;amazed,Smileys & People,U+1F62E
+😯,hushed face,surprised;quiet;hushed,Smileys & People,U+1F62F
+😲,astonished face,astonished;amazed;wow,Smileys & People,U+1F632
+😳,flushed face,embarrassed;shy;flushed,Smileys & People,U+1F633
+🥺,pleading face,pleading;puppy eyes;cute;beg,Smileys & People,U+1F97A
+🥹,face holding back tears,proud;resist;gratitude,Smileys & People,U+1F979
+😦,frowning face with open mouth,surprised;frown;concerned,Smileys & People,U+1F626
+😧,anguished face,anguish;pain;distress,Smileys & People,U+1F627
+😨,fearful face,scared;fear;afraid,Smileys & People,U+1F628
+😰,anxious face with sweat,anxious;nervous;sweat,Smileys & People,U+1F630
+😥,sad but relieved face,sad;relief;disappointed,Smileys & People,U+1F625
+😢,crying face,cry;sad;tears,Smileys & People,U+1F622
+😭,loudly crying face,cry;sob;tears;bawl,Smileys & People,U+1F62D
+😱,face screaming in fear,scared;fear;scream,Smileys & People,U+1F631
+😖,confounded face,frustrated;confounded;upset,Smileys & People,U+1F616
+😣,persevering face,struggle;persevere;effort,Smileys & People,U+1F623
+😞,disappointed face,sad;disappointed;upset,Smileys & People,U+1F61E
+😓,downcast face with sweat,sad;sweat;tired,Smileys & People,U+1F613
+😩,weary face,tired;weary;exhausted,Smileys & People,U+1F629
+😫,tired face,tired;exhausted;weary,Smileys & People,U+1F62B
+🥱,yawning face,yawn;tired;sleepy,Smileys & People,U+1F971
+😤,face with steam from nose,angry;frustrated;steam,Smileys & People,U+1F624
+😡,enraged face,angry;mad;rage;furious,Smileys & People,U+1F621
+😠,angry face,angry;mad;upset,Smileys & People,U+1F620
+🤬,face with symbols on mouth,swearing;cursing;angry,Smileys & People,U+1F92C
+👿,angry face with horns,devil;angry;evil,Smileys & People,U+1F47F
+💀,skull,death;dead;skull,Smileys & People,U+1F480
+☠️,skull and crossbones,death;danger;poison,Smileys & People,U+2620 U+FE0F
+💩,pile of poo,poop;shit;crap,Smileys & People,U+1F4A9
+🤡,clown face,clown;circus;funny,Smileys & People,U+1F921
+👹,ogre,ogre;monster;japanese,Smileys & People,U+1F479
+👺,goblin,goblin;monster;japanese,Smileys & People,U+1F47A
+👻,ghost,ghost;spirit;halloween,Smileys & People,U+1F47B
+👽,alien,alien;ufo;extraterrestrial,Smileys & People,U+1F47D
+👾,alien monster,alien;monster;game,Smileys & People,U+1F47E
+🤖,robot,robot;ai;artificial,Smileys & People,U+1F916
+😺,grinning cat,cat;happy;smile,Smileys & People,U+1F63A
+😸,grinning cat with smiling eyes,cat;happy;smile,Smileys & People,U+1F638
+😹,cat with tears of joy,cat;laugh;tears,Smileys & People,U+1F639
+😻,smiling cat with heart-eyes,cat;love;heart,Smileys & People,U+1F63B
+😼,cat with wry smile,cat;smirk;sly,Smileys & People,U+1F63C
+😽,kissing cat,cat;kiss;love,Smileys & People,U+1F63D
+🙀,weary cat,cat;scared;surprised,Smileys & People,U+1F640
+😿,crying cat,cat;cry;sad,Smileys & People,U+1F63F
+😾,pouting cat,cat;angry;mad,Smileys & People,U+1F63E
+👋,waving hand,wave;hello;goodbye;hi,Smileys & People,U+1F44B
+🤚,raised back of hand,hand;stop;high five,Smileys & People,U+1F91A
+🖐️,hand with fingers splayed,hand;five;stop,Smileys & People,U+1F590 U+FE0F
+✋,raised hand,hand;stop;high five,Smileys & People,U+270B
+🖖,vulcan salute,spock;star trek;vulcan,Smileys & People,U+1F596
+🫱,rightwards hand,hand;right;handshake,Smileys & People,U+1FAF1
+🫲,leftwards hand,hand;left;handshake,Smileys & People,U+1FAF2
+🫳,palm down hand,hand;palm;down,Smileys & People,U+1FAF3
+🫴,palm up hand,hand;palm;up;offer,Smileys & People,U+1FAF4
+👌,OK hand,ok;okay;perfect;good,Smileys & People,U+1F44C
+🤌,pinched fingers,italian;chef kiss;perfect,Smileys & People,U+1F90C
+🤏,pinching hand,small;tiny;little,Smileys & People,U+1F90F
+✌️,victory hand,peace;victory;two,Smileys & People,U+270C U+FE0F
+🤞,crossed fingers,luck;hope;wish,Smileys & People,U+1F91E
+🫰,hand with index finger and thumb crossed,heart;love;money,Smileys & People,U+1FAF0
+🤟,love-you gesture,love;you;ily,Smileys & People,U+1F91F
+🤘,sign of the horns,rock;metal;devil,Smileys & People,U+1F918
+🤙,call me hand,call;phone;hang loose,Smileys & People,U+1F919
+👈,backhand index pointing left,point;left;direction,Smileys & People,U+1F448
+👉,backhand index pointing right,point;right;direction,Smileys & People,U+1F449
+👆,backhand index pointing up,point;up;direction,Smileys & People,U+1F446
+🖕,middle finger,middle finger;rude;offensive,Smileys & People,U+1F595
+👇,backhand index pointing down,point;down;direction,Smileys & People,U+1F447
+☝️,index pointing up,point;up;one,Smileys & People,U+261D U+FE0F
+🫵,index pointing at the viewer,point;you;finger,Smileys & People,U+1FAF5
+👍,thumbs up,thumbs up;good;yes;like,Smileys & People,U+1F44D
+👎,thumbs down,thumbs down;bad;no;dislike,Smileys & People,U+1F44E
+✊,raised fist,fist;power;strength,Smileys & People,U+270A
+👊,oncoming fist,fist;punch;bump,Smileys & People,U+1F44A
+🤛,left-facing fist,fist;bump;left,Smileys & People,U+1F91B
+🤜,right-facing fist,fist;bump;right,Smileys & People,U+1F91C
+👏,clapping hands,clap;applause;bravo;good job,Smileys & People,U+1F44F
+🙌,raising hands,praise;celebration;hooray,Smileys & People,U+1F64C
+🫶,heart hands,love;heart;support,Smileys & People,U+1FAF6
+👐,open hands,open;hug;jazz hands,Smileys & People,U+1F450
+🤲,palms up together,prayer;please;hope,Smileys & People,U+1F932
+🤝,handshake,handshake;deal;agreement,Smileys & People,U+1F91D
+🙏,folded hands,prayer;please;thank you;namaste,Smileys & People,U+1F64F
+✍️,writing hand,write;writing;author,Smileys & People,U+270D U+FE0F
+💅,nail polish,nail;polish;beauty;manicure,Smileys & People,U+1F485
+🤳,selfie,selfie;camera;phone,Smileys & People,U+1F933
+💪,flexed biceps,muscle;strong;strength,Smileys & People,U+1F4AA
+🦾,mechanical arm,prosthetic;mechanical;robot,Smileys & People,U+1F9BE
+🦿,mechanical leg,prosthetic;mechanical;robot,Smileys & People,U+1F9BF
+🦵,leg,leg;limb;kick,Smileys & People,U+1F9B5
+🦶,foot,foot;kick;stomp,Smileys & People,U+1F9B6
+👂,ear,ear;hear;listen,Smileys & People,U+1F442
+🦻,ear with hearing aid,ear;hearing aid;accessibility,Smileys & People,U+1F9BB
+👃,nose,nose;smell;sniff,Smileys & People,U+1F443
+🧠,brain,brain;smart;intelligent,Smileys & People,U+1F9E0
+🫀,anatomical heart,heart;organ;medical,Smileys & People,U+1FAC0
+🫁,lungs,lungs;breathe;organ,Smileys & People,U+1FAC1
+🦷,tooth,tooth;dental;dentist,Smileys & People,U+1F9B7
+🦴,bone,bone;skeleton;dog,Smileys & People,U+1F9B4
+👀,eyes,eyes;look;watch,Smileys & People,U+1F440
+👁️,eye,eye;look;see,Smileys & People,U+1F441 U+FE0F
+👅,tongue,tongue;taste;lick,Smileys & People,U+1F445
+👄,mouth,mouth;lips;kiss,Smileys & People,U+1F444
+🫦,biting lip,lip;bite;flirt,Smileys & People,U+1FAE6
+🐶,dog face,dog;puppy;pet;animal,Animals & Nature,U+1F436
+🐱,cat face,cat;kitten;pet;animal,Animals & Nature,U+1F431
+🐭,mouse face,mouse;animal;rodent,Animals & Nature,U+1F42D
+🐹,hamster,hamster;pet;animal,Animals & Nature,U+1F439
+🐰,rabbit face,rabbit;bunny;animal,Animals & Nature,U+1F430
+🦊,fox,fox;animal;clever,Animals & Nature,U+1F98A
+🐻,bear,bear;animal;teddy,Animals & Nature,U+1F43B
+🐼,panda,panda;animal;cute,Animals & Nature,U+1F43C
+🐻‍❄️,polar bear,polar bear;white;arctic,Animals & Nature,U+1F43B U+200D U+2744 U+FE0F
+🐨,koala,koala;animal;australia,Animals & Nature,U+1F428
+🐯,tiger face,tiger;animal;cat,Animals & Nature,U+1F42F
+🦁,lion,lion;animal;king,Animals & Nature,U+1F981
+🐮,cow face,cow;animal;moo,Animals & Nature,U+1F42E
+🐷,pig face,pig;animal;oink,Animals & Nature,U+1F437
+🐽,pig nose,pig;nose;snout,Animals & Nature,U+1F43D
+🐸,frog,frog;animal;amphibian,Animals & Nature,U+1F438
+🐵,monkey face,monkey;animal;primate,Animals & Nature,U+1F435
+🙈,see-no-evil monkey,monkey;see no evil;blind,Animals & Nature,U+1F648
+🙉,hear-no-evil monkey,monkey;hear no evil;deaf,Animals & Nature,U+1F649
+🙊,speak-no-evil monkey,monkey;speak no evil;mute,Animals & Nature,U+1F64A
+🐒,monkey,monkey;animal;banana,Animals & Nature,U+1F412
+🦍,gorilla,gorilla;animal;strong,Animals & Nature,U+1F98D
+🦧,orangutan,orangutan;animal;ape,Animals & Nature,U+1F9A7
+🐕,dog,dog;animal;pet,Animals & Nature,U+1F415
+🐩,poodle,poodle;dog;fancy,Animals & Nature,U+1F429
+🦮,guide dog,guide dog;blind;service,Animals & Nature,U+1F9AE
+🐕‍🦺,service dog,service dog;assistance;working,Animals & Nature,U+1F415 U+200D U+1F9BA
+🐺,wolf,wolf;animal;wild,Animals & Nature,U+1F43A
+🦝,raccoon,raccoon;animal;trash,Animals & Nature,U+1F99D
+🐈,cat,cat;animal;pet,Animals & Nature,U+1F408
+🐈‍⬛,black cat,black cat;superstition;halloween,Animals & Nature,U+1F408 U+200D U+2B1B
+🐅,tiger,tiger;animal;stripes,Animals & Nature,U+1F405
+🐆,leopard,leopard;spots;big cat,Animals & Nature,U+1F406
+🐴,horse face,horse;animal;racing,Animals & Nature,U+1F434
+🫎,moose,moose;antlers;canada,Animals & Nature,U+1FACE
+🫏,donkey,donkey;stubborn;animal,Animals & Nature,U+1FACF
+🐎,horse,horse;racing;gallop,Animals & Nature,U+1F40E
+🦄,unicorn,unicorn;magical;horn,Animals & Nature,U+1F984
+🦓,zebra,zebra;stripes;africa,Animals & Nature,U+1F993
+🦌,deer,deer;antlers;forest,Animals & Nature,U+1F98C
+🦬,bison,bison;buffalo;american,Animals & Nature,U+1F9AC
+🐂,ox,ox;bull;strong,Animals & Nature,U+1F402
+🐃,water buffalo,buffalo;water;asia,Animals & Nature,U+1F403
+🐄,cow,cow;dairy;farm,Animals & Nature,U+1F404
+🐖,pig,pig;farm;bacon,Animals & Nature,U+1F416
+🐗,boar,boar;wild;tusks,Animals & Nature,U+1F417
+🐏,ram,ram;sheep;horns,Animals & Nature,U+1F40F
+🐑,ewe,sheep;wool;farm,Animals & Nature,U+1F411
+🐐,goat,goat;farm;horns,Animals & Nature,U+1F410
+🐪,camel,camel;desert;hump,Animals & Nature,U+1F42A
+🐫,two-hump camel,camel;bactrian;desert,Animals & Nature,U+1F42B
+🦙,llama,llama;alpaca;wool,Animals & Nature,U+1F999
+🦒,giraffe,giraffe;tall;neck,Animals & Nature,U+1F992
+🐘,elephant,elephant;trunk;memory,Animals & Nature,U+1F418
+🦣,mammoth,mammoth;extinct;ice age,Animals & Nature,U+1F9A3
+🦏,rhinoceros,rhino;horn;africa,Animals & Nature,U+1F98F
+🦛,hippopotamus,hippo;water;africa,Animals & Nature,U+1F99B
+🐁,mouse,mouse;rodent;small,Animals & Nature,U+1F401
+🐀,rat,rat;rodent;sewer,Animals & Nature,U+1F400
+🐇,rabbit,rabbit;bunny;hop,Animals & Nature,U+1F407
+🐿️,chipmunk,chipmunk;squirrel;nuts,Animals & Nature,U+1F43F U+FE0F
+🦫,beaver,beaver;dam;wood,Animals & Nature,U+1F9AB
+🦔,hedgehog,hedgehog;spikes;cute,Animals & Nature,U+1F994
+🦇,bat,bat;vampire;night,Animals & Nature,U+1F987
+🦥,sloth,sloth;slow;lazy,Animals & Nature,U+1F9A5
+🦦,otter,otter;water;playful,Animals & Nature,U+1F9A6
+🦨,skunk,skunk;smell;stripe,Animals & Nature,U+1F9A8
+🦘,kangaroo,kangaroo;hop;australia,Animals & Nature,U+1F998
+🦡,badger,badger;honey;dig,Animals & Nature,U+1F9A1
+🐾,paw prints,paw;prints;animal,Animals & Nature,U+1F43E
+🦃,turkey,turkey;thanksgiving;bird,Animals & Nature,U+1F983
+🐔,chicken,chicken;rooster;farm,Animals & Nature,U+1F414
+🐓,rooster,rooster;cock;morning,Animals & Nature,U+1F413
+🐣,hatching chick,chick;hatching;egg,Animals & Nature,U+1F423
+🐤,baby chick,chick;baby;yellow,Animals & Nature,U+1F424
+🐥,front-facing baby chick,chick;baby;cute,Animals & Nature,U+1F425
+🐦,bird,bird;fly;tweet,Animals & Nature,U+1F426
+🐧,penguin,penguin;antarctica;cold,Animals & Nature,U+1F427
+🕊️,dove,dove;peace;white,Animals & Nature,U+1F54A U+FE0F
+🦅,eagle,eagle;america;freedom,Animals & Nature,U+1F985
+🦆,duck,duck;quack;water,Animals & Nature,U+1F986
+🦢,swan,swan;elegant;white,Animals & Nature,U+1F9A2
+🦉,owl,owl;wise;night,Animals & Nature,U+1F989
+🦤,dodo,dodo;extinct;mauritius,Animals & Nature,U+1F9A4
+🪶,feather,feather;bird;light,Animals & Nature,U+1FAB6
+🦩,flamingo,flamingo;pink;tropical,Animals & Nature,U+1F9A9
+🦜,parrot,parrot;colorful;talk,Animals & Nature,U+1F99C
+🪽,wing,wing;bird;fly,Animals & Nature,U+1FABD
+🐦‍⬛,black bird,blackbird;crow;raven,Animals & Nature,U+1F426 U+200D U+2B1B
+🐦‍🔥,phoenix,phoenix;fire;mythical,Animals & Nature,U+1F426 U+200D U+1F525
+🐊,crocodile,crocodile;alligator;reptile,Animals & Nature,U+1F40A
+🐢,turtle,turtle;slow;shell,Animals & Nature,U+1F422
+🦎,lizard,lizard;gecko;reptile,Animals & Nature,U+1F98E
+🐍,snake,snake;serpent;slither,Animals & Nature,U+1F40D
+🐲,dragon face,dragon;mythical;fire,Animals & Nature,U+1F432
+🐉,dragon,dragon;chinese;mythical,Animals & Nature,U+1F409
+🦕,sauropod,dinosaur;long neck;extinct,Animals & Nature,U+1F995
+🦖,T-Rex,dinosaur;t-rex;extinct,Animals & Nature,U+1F996
+🐳,spouting whale,whale;ocean;big,Animals & Nature,U+1F433
+🐋,whale,whale;ocean;mammal,Animals & Nature,U+1F40B
+🐬,dolphin,dolphin;smart;ocean,Animals & Nature,U+1F42C
+🦭,seal,seal;ocean;cute,Animals & Nature,U+1F9AD
+🐟,fish,fish;ocean;swim,Animals & Nature,U+1F41F
+🐠,tropical fish,fish;tropical;colorful,Animals & Nature,U+1F420
+🐡,blowfish,blowfish;puffer;spiky,Animals & Nature,U+1F421
+🦈,shark,shark;dangerous;ocean,Animals & Nature,U+1F988
+🐙,octopus,octopus;tentacles;smart,Animals & Nature,U+1F419
+🐚,spiral shell,shell;ocean;spiral,Animals & Nature,U+1F41A
+🪸,coral,coral;reef;ocean,Animals & Nature,U+1FAB8
+🪼,jellyfish,jellyfish;sting;ocean,Animals & Nature,U+1FABC
+🐌,snail,snail;slow;shell,Animals & Nature,U+1F40C
+🦋,butterfly,butterfly;beautiful;metamorphosis,Animals & Nature,U+1F98B
+🐛,bug,bug;insect;caterpillar,Animals & Nature,U+1F41B
+🐜,ant,ant;work;colony,Animals & Nature,U+1F41C
+🐝,honeybee,bee;honey;buzz,Animals & Nature,U+1F41D
+🪲,beetle,beetle;bug;hard shell,Animals & Nature,U+1FAB2
+🐞,lady beetle,ladybug;red;spots,Animals & Nature,U+1F41E
+🦗,cricket,cricket;chirp;night,Animals & Nature,U+1F997
+🪳,cockroach,cockroach;pest;gross,Animals & Nature,U+1FAB3
+🕷️,spider,spider;web;eight legs,Animals & Nature,U+1F577 U+FE0F
+🕸️,spider web,web;spider;trap,Animals & Nature,U+1F578 U+FE0F
+🦂,scorpion,scorpion;sting;desert,Animals & Nature,U+1F982
+🦟,mosquito,mosquito;bite;annoying,Animals & Nature,U+1F99F
+🪰,fly,fly;pest;buzz,Animals & Nature,U+1FAB0
+🪱,worm,worm;earth;soil,Animals & Nature,U+1FAB1
+🦠,microbe,microbe;virus;bacteria,Animals & Nature,U+1F9A0
+💐,bouquet,flowers;bouquet;gift,Animals & Nature,U+1F490
+🌸,cherry blossom,cherry;blossom;spring,Animals & Nature,U+1F338
+💮,white flower,flower;white;japanese,Animals & Nature,U+1F4AE
+🪷,lotus,lotus;meditation;water,Animals & Nature,U+1FAB7
+🏵️,rosette,rosette;flower;decoration,Animals & Nature,U+1F3F5 U+FE0F
+🌹,rose,rose;love;red,Animals & Nature,U+1F339
+🥀,wilted flower,wilted;dead;sad,Animals & Nature,U+1F940
+🌺,hibiscus,hibiscus;tropical;hawaii,Animals & Nature,U+1F33A
+🌻,sunflower,sunflower;yellow;big,Animals & Nature,U+1F33B
+🌼,blossom,blossom;flower;spring,Animals & Nature,U+1F33C
+🌷,tulip,tulip;netherlands;spring,Animals & Nature,U+1F337
+🪻,hyacinth,hyacinth;purple;spring,Animals & Nature,U+1FABB
+🌱,seedling,seedling;plant;growth,Animals & Nature,U+1F331
+🪴,potted plant,plant;pot;houseplant,Animals & Nature,U+1FAB4
+🌲,evergreen tree,tree;evergreen;pine,Animals & Nature,U+1F332
+🌳,deciduous tree,tree;deciduous;leaves,Animals & Nature,U+1F333
+🌴,palm tree,palm;tropical;beach,Animals & Nature,U+1F334
+🌵,cactus,cactus;desert;spiky,Animals & Nature,U+1F335
+🌾,sheaf of rice,rice;grain;harvest,Animals & Nature,U+1F33E
+🌿,herb,herb;leaf;green,Animals & Nature,U+1F33F
+☘️,shamrock,shamrock;irish;luck,Animals & Nature,U+2618 U+FE0F
+🍀,four leaf clover,clover;luck;rare,Animals & Nature,U+1F340
+🍁,maple leaf,maple;autumn;canada,Animals & Nature,U+1F341
+🍂,fallen leaves,leaves;autumn;fall,Animals & Nature,U+1F342
+🍃,leaf fluttering in wind,leaf;wind;nature,Animals & Nature,U+1F343
+🪹,empty nest,nest;empty;bird,Animals & Nature,U+1FAB9
+🪺,nest with eggs,nest;eggs;bird,Animals & Nature,U+1FABA
+🍄,mushroom,mushroom;fungi;red,Animals & Nature,U+1F344
+🍎,red apple,apple;fruit;red;healthy,Food & Drink,U+1F34E
+🍏,green apple,apple;fruit;green;sour,Food & Drink,U+1F34F
+🍐,pear,pear;fruit;green,Food & Drink,U+1F350
+🍊,tangerine,orange;fruit;citrus,Food & Drink,U+1F34A
+🍋,lemon,lemon;fruit;citrus;sour,Food & Drink,U+1F34B
+🍌,banana,banana;fruit;yellow,Food & Drink,U+1F34C
+🍉,watermelon,watermelon;fruit;summer,Food & Drink,U+1F349
+🍇,grapes,grapes;fruit;wine,Food & Drink,U+1F347
+🍓,strawberry,strawberry;fruit;berry,Food & Drink,U+1F353
+🫐,blueberries,blueberry;fruit;healthy,Food & Drink,U+1FAD0
+🍈,melon,melon;cantaloupe;fruit,Food & Drink,U+1F348
+🍒,cherries,cherry;fruit;red,Food & Drink,U+1F352
+🍑,peach,peach;fruit;butt,Food & Drink,U+1F351
+🥭,mango,mango;fruit;tropical,Food & Drink,U+1F96D
+🍍,pineapple,pineapple;fruit;tropical,Food & Drink,U+1F34D
+🥥,coconut,coconut;fruit;tropical,Food & Drink,U+1F965
+🥝,kiwi fruit,kiwi;fruit;green,Food & Drink,U+1F95D
+🍅,tomato,tomato;vegetable;red,Food & Drink,U+1F345
+🍆,eggplant,eggplant;vegetable;purple,Food & Drink,U+1F346
+🥑,avocado,avocado;fruit;green;healthy,Food & Drink,U+1F951
+🥦,broccoli,broccoli;vegetable;green;healthy,Food & Drink,U+1F966
+🥬,leafy greens,lettuce;leafy;salad,Food & Drink,U+1F96C
+🥒,cucumber,cucumber;vegetable;green,Food & Drink,U+1F952
+🌶️,hot pepper,pepper;hot;spicy,Food & Drink,U+1F336 U+FE0F
+🫑,bell pepper,bell pepper;vegetable;colorful,Food & Drink,U+1FAD1
+🌽,ear of corn,corn;vegetable;yellow,Food & Drink,U+1F33D
+🥕,carrot,carrot;vegetable;orange,Food & Drink,U+1F955
+🫒,olive,olive;mediterranean;oil,Food & Drink,U+1FAD2
+🧄,garlic,garlic;cooking;flavor,Food & Drink,U+1F9C4
+🧅,onion,onion;cooking;cry,Food & Drink,U+1F9C5
+🥔,potato,potato;vegetable;starch,Food & Drink,U+1F954
+🍠,roasted sweet potato,sweet potato;roasted;orange,Food & Drink,U+1F360
+🫘,beans,beans;legumes;protein,Food & Drink,U+1FAD8
+🥐,croissant,croissant;french;pastry,Food & Drink,U+1F950
+🥯,bagel,bagel;bread;breakfast,Food & Drink,U+1F96F
+🍞,bread,bread;loaf;carbs,Food & Drink,U+1F35E
+🥖,baguette bread,baguette;bread;french,Food & Drink,U+1F956
+🥨,pretzel,pretzel;twisted;salt,Food & Drink,U+1F968
+🧀,cheese wedge,cheese;dairy;yellow,Food & Drink,U+1F9C0
+🥚,egg,egg;protein;breakfast,Food & Drink,U+1F95A
+🍳,cooking,cooking;egg;frying pan,Food & Drink,U+1F373
+🧈,butter,butter;dairy;spread,Food & Drink,U+1F9C8
+🥞,pancakes,pancakes;breakfast;syrup,Food & Drink,U+1F95E
+🧇,waffle,waffle;breakfast;syrup,Food & Drink,U+1F9C7
+🥓,bacon,bacon;meat;breakfast,Food & Drink,U+1F953
+🥩,cut of meat,meat;steak;protein,Food & Drink,U+1F969
+🍗,poultry leg,chicken;meat;drumstick,Food & Drink,U+1F357
+🍖,meat on bone,meat;bone;steak,Food & Drink,U+1F356
+🌭,hot dog,hot dog;sausage;fast food,Food & Drink,U+1F32D
+🍔,hamburger,burger;hamburger;fast food,Food & Drink,U+1F354
+🍟,french fries,fries;french fries;fast food,Food & Drink,U+1F35F
+🍕,pizza,pizza;italian;cheese,Food & Drink,U+1F355
+🫓,flatbread,flatbread;naan;pita,Food & Drink,U+1FAD3
+🥪,sandwich,sandwich;bread;lunch,Food & Drink,U+1F96A
+🥙,stuffed flatbread,pita;falafel;middle eastern,Food & Drink,U+1F959
+🧆,falafel,falafel;middle eastern;chickpea,Food & Drink,U+1F9C6
+🌮,taco,taco;mexican;food,Food & Drink,U+1F32E
+🌯,burrito,burrito;mexican;wrap,Food & Drink,U+1F32F
+🫔,tamale,tamale;mexican;corn,Food & Drink,U+1FAD4
+🥗,green salad,salad;healthy;vegetables,Food & Drink,U+1F957
+🥘,shallow pan of food,paella;pan;spanish,Food & Drink,U+1F958
+🫕,fondue,fondue;cheese;swiss,Food & Drink,U+1FAD5
+🥫,canned food,can;food;preserved,Food & Drink,U+1F96B
+🍝,spaghetti,pasta;spaghetti;italian,Food & Drink,U+1F35D
+🍜,steaming bowl,ramen;noodles;soup,Food & Drink,U+1F35C
+🍲,pot of food,stew;pot;cooking,Food & Drink,U+1F372
+🍛,curry rice,curry;rice;indian,Food & Drink,U+1F35B
+🍣,sushi,sushi;japanese;fish,Food & Drink,U+1F363
+🍱,bento box,bento;japanese;lunch,Food & Drink,U+1F371
+🥟,dumpling,dumpling;chinese;steamed,Food & Drink,U+1F95F
+🦪,oyster,oyster;seafood;shell,Food & Drink,U+1F9AA
+🍤,fried shrimp,shrimp;seafood;fried,Food & Drink,U+1F364
+🍙,rice ball,rice ball;japanese;onigiri,Food & Drink,U+1F359
+🍚,cooked rice,rice;cooked;grain,Food & Drink,U+1F35A
+🍘,rice cracker,rice cracker;japanese;snack,Food & Drink,U+1F358
+🍥,fish cake with swirl,fish cake;japanese;narutomaki,Food & Drink,U+1F365
+🥠,fortune cookie,fortune cookie;chinese;luck,Food & Drink,U+1F960
+🥮,moon cake,moon cake;chinese;festival,Food & Drink,U+1F96E
+🍢,oden,oden;japanese;skewer,Food & Drink,U+1F362
+🍡,dango,dango;japanese;sweet,Food & Drink,U+1F361
+🍧,shaved ice,shaved ice;dessert;cold,Food & Drink,U+1F367
+🍨,ice cream,ice cream;dessert;cold,Food & Drink,U+1F368
+🍦,soft ice cream,soft serve;ice cream;dessert,Food & Drink,U+1F366
+🥧,pie,pie;dessert;slice,Food & Drink,U+1F967
+🧁,cupcake,cupcake;dessert;sweet,Food & Drink,U+1F9C1
+🍰,shortcake,cake;dessert;birthday,Food & Drink,U+1F370
+🎂,birthday cake,birthday;cake;celebration,Food & Drink,U+1F382
+🍮,custard,custard;pudding;dessert,Food & Drink,U+1F36E
+🍭,lollipop,lollipop;candy;sweet,Food & Drink,U+1F36D
+🍬,candy,candy;sweet;sugar,Food & Drink,U+1F36C
+🍫,chocolate bar,chocolate;candy;sweet,Food & Drink,U+1F36B
+🍿,popcorn,popcorn;movie;snack,Food & Drink,U+1F37F
+🍩,doughnut,donut;doughnut;sweet,Food & Drink,U+1F369
+🍪,cookie,cookie;sweet;biscuit,Food & Drink,U+1F36A
+🌰,chestnut,chestnut;nut;autumn,Food & Drink,U+1F330
+🥜,peanuts,peanuts;nuts;snack,Food & Drink,U+1F95C
+🍯,honey pot,honey;sweet;bee,Food & Drink,U+1F36F
+🥛,glass of milk,milk;drink;dairy,Food & Drink,U+1F95B
+🍼,baby bottle,bottle;baby;milk,Food & Drink,U+1F37C
+🫖,teapot,teapot;tea;hot,Food & Drink,U+1FAD6
+☕,hot beverage,coffee;tea;hot;drink,Food & Drink,U+2615
+🍵,teacup without handle,tea;green tea;drink,Food & Drink,U+1F375
+🧃,beverage box,juice box;drink;kids,Food & Drink,U+1F9C3
+🥤,cup with straw,soda;drink;straw,Food & Drink,U+1F964
+🧋,bubble tea,bubble tea;boba;taiwan,Food & Drink,U+1F9CB
+🧊,ice,ice;cold;frozen,Food & Drink,U+1F9CA
+🍶,sake,sake;japanese;alcohol,Food & Drink,U+1F376
+🍾,bottle with popping cork,champagne;celebration;alcohol,Food & Drink,U+1F37E
+🍷,wine glass,wine;alcohol;drink,Food & Drink,U+1F377
+🍸,cocktail glass,cocktail;martini;alcohol,Food & Drink,U+1F378
+🍹,tropical drink,tropical;cocktail;vacation,Food & Drink,U+1F379
+🍺,beer mug,beer;alcohol;drink,Food & Drink,U+1F37A
+🍻,clinking beer mugs,cheers;beer;celebration,Food & Drink,U+1F37B
+🥂,clinking glasses,cheers;champagne;celebration,Food & Drink,U+1F942
+🥃,tumbler glass,whiskey;alcohol;drink,Food & Drink,U+1F943
+🫗,pouring liquid,pour;liquid;drink,Food & Drink,U+1FAD7
+🥢,chopsticks,chopsticks;asian;eating,Food & Drink,U+1F962
+🍽️,fork and knife with plate,plate;dining;restaurant,Food & Drink,U+1F37D U+FE0F
+🍴,fork and knife,fork;knife;cutlery,Food & Drink,U+1F374
+🥄,spoon,spoon;cutlery;eating,Food & Drink,U+1F944
+🔪,kitchen knife,knife;kitchen;cooking,Food & Drink,U+1F52A
+🫙,jar,jar;container;preserve,Food & Drink,U+1FAD9
+🏺,amphora,amphora;jar;ancient,Food & Drink,U+1F3FA
+⚽,soccer ball,soccer;football;sport;ball,Activities,U+26BD
+🏀,basketball,basketball;sport;ball,Activities,U+1F3C0
+🏈,american football,football;american;sport,Activities,U+1F3C8
+⚾,baseball,baseball;sport;ball,Activities,U+26BE
+🥎,softball,softball;sport;ball,Activities,U+1F94E
+🎾,tennis,tennis;sport;ball,Activities,U+1F3BE
+🏐,volleyball,volleyball;sport;ball,Activities,U+1F3D0
+🏉,rugby football,rugby;sport;ball,Activities,U+1F3C9
+🥏,flying disc,frisbee;disc;sport,Activities,U+1F94F
+🎱,pool 8 ball,pool;billiards;8 ball,Activities,U+1F3B1
+🪀,yo-yo,yo-yo;toy;string,Activities,U+1FA80
+🏓,ping pong,ping pong;table tennis;sport,Activities,U+1F3D3
+🏸,badminton,badminton;sport;racket,Activities,U+1F3F8
+🏒,ice hockey,hockey;ice;sport,Activities,U+1F3D2
+🏑,field hockey,hockey;field;sport,Activities,U+1F3D1
+🥍,lacrosse,lacrosse;sport;stick,Activities,U+1F94D
+🏏,cricket game,cricket;sport;bat,Activities,U+1F3CF
+🪃,boomerang,boomerang;australia;return,Activities,U+1FA83
+🥅,goal net,goal;net;sport,Activities,U+1F945
+⛳,flag in hole,golf;sport;hole,Activities,U+26F3
+🪁,kite,kite;fly;wind,Activities,U+1FA81
+🏹,bow and arrow,archery;bow;arrow,Activities,U+1F3F9
+🎣,fishing pole,fishing;pole;hobby,Activities,U+1F3A3
+🤿,diving mask,diving;mask;underwater,Activities,U+1F93F
+🥊,boxing glove,boxing;glove;fight,Activities,U+1F94A
+🥋,martial arts uniform,karate;martial arts;uniform,Activities,U+1F94B
+🎽,running shirt,running;shirt;marathon,Activities,U+1F3BD
+🛹,skateboard,skateboard;skate;sport,Activities,U+1F6F9
+🛷,sled,sled;snow;winter,Activities,U+1F6F7
+⛸️,ice skate,ice skating;skate;winter,Activities,U+26F8 U+FE0F
+🥌,curling stone,curling;stone;winter,Activities,U+1F94C
+🎿,skis,skiing;ski;winter,Activities,U+1F3BF
+⛷️,skier,skiing;skier;winter,Activities,U+26F7 U+FE0F
+🏂,snowboarder,snowboard;winter;sport,Activities,U+1F3C2
+🪂,parachute,parachute;skydiving;fall,Activities,U+1FA82
+🏋️‍♀️,woman lifting weights,weightlifting;woman;strong,Activities,U+1F3CB U+FE0F U+200D U+2640 U+FE0F
+🏋️,person lifting weights,weightlifting;gym;strong,Activities,U+1F3CB U+FE0F
+🏋️‍♂️,man lifting weights,weightlifting;man;strong,Activities,U+1F3CB U+FE0F U+200D U+2642 U+FE0F
+🤼‍♀️,women wrestling,wrestling;women;sport,Activities,U+1F93C U+200D U+2640 U+FE0F
+🤼,people wrestling,wrestling;sport;fight,Activities,U+1F93C
+🤼‍♂️,men wrestling,wrestling;man;sport,Activities,U+1F93C U+200D U+2642 U+FE0F
+🤸‍♀️,woman cartwheeling,cartwheel;woman;gymnastics,Activities,U+1F938 U+200D U+2640 U+FE0F
+🤸,person cartwheeling,cartwheel;gymnastics;flip,Activities,U+1F938
+🤸‍♂️,man cartwheeling,cartwheel;man;gymnastics,Activities,U+1F938 U+200D U+2642 U+FE0F
+⛹️‍♀️,woman bouncing ball,basketball;woman;dribble,Activities,U+26F9 U+FE0F U+200D U+2640 U+FE0F
+⛹️,person bouncing ball,basketball;dribble;sport,Activities,U+26F9 U+FE0F
+⛹️‍♂️,man bouncing ball,basketball;man;dribble,Activities,U+26F9 U+FE0F U+200D U+2642 U+FE0F
+🤺,person fencing,fencing;sword;sport,Activities,U+1F93A
+🤾‍♀️,woman playing handball,handball;woman;sport,Activities,U+1F93E U+200D U+2640 U+FE0F
+🤾,person playing handball,handball;sport;ball,Activities,U+1F93E
+🤾‍♂️,man playing handball,handball;man;sport,Activities,U+1F93E U+200D U+2642 U+FE0F
+🏌️‍♀️,woman golfing,golf;woman;sport,Activities,U+1F3CC U+FE0F U+200D U+2640 U+FE0F
+🏌️,person golfing,golf;sport;swing,Activities,U+1F3CC U+FE0F
+🏌️‍♂️,man golfing,golf;man;sport,Activities,U+1F3CC U+FE0F U+200D U+2642 U+FE0F
+🏇,horse racing,horse;racing;jockey,Activities,U+1F3C7
+🧘‍♀️,woman in lotus position,yoga;meditation;woman,Activities,U+1F9D8 U+200D U+2640 U+FE0F
+🧘,person in lotus position,yoga;meditation;zen,Activities,U+1F9D8
+🧘‍♂️,man in lotus position,yoga;meditation;man,Activities,U+1F9D8 U+200D U+2642 U+FE0F
+🏄‍♀️,woman surfing,surfing;woman;wave,Activities,U+1F3C4 U+200D U+2640 U+FE0F
+🏄,person surfing,surfing;wave;ocean,Activities,U+1F3C4
+🏄‍♂️,man surfing,surfing;man;wave,Activities,U+1F3C4 U+200D U+2642 U+FE0F
+🏊‍♀️,woman swimming,swimming;woman;pool,Activities,U+1F3CA U+200D U+2640 U+FE0F
+🏊,person swimming,swimming;pool;water,Activities,U+1F3CA
+🏊‍♂️,man swimming,swimming;man;pool,Activities,U+1F3CA U+200D U+2642 U+FE0F
+🤽‍♀️,woman playing water polo,water polo;woman;sport,Activities,U+1F93D U+200D U+2640 U+FE0F
+🤽,person playing water polo,water polo;sport;water,Activities,U+1F93D
+🤽‍♂️,man playing water polo,water polo;man;sport,Activities,U+1F93D U+200D U+2642 U+FE0F
+🚣‍♀️,woman rowing boat,rowing;woman;boat,Activities,U+1F6A3 U+200D U+2640 U+FE0F
+🚣,person rowing boat,rowing;boat;water,Activities,U+1F6A3
+🚣‍♂️,man rowing boat,rowing;man;boat,Activities,U+1F6A3 U+200D U+2642 U+FE0F
+🧗‍♀️,woman climbing,climbing;woman;rock,Activities,U+1F9D7 U+200D U+2640 U+FE0F
+🧗,person climbing,climbing;rock;mountain,Activities,U+1F9D7
+🧗‍♂️,man climbing,climbing;man;rock,Activities,U+1F9D7 U+200D U+2642 U+FE0F
+🚵‍♀️,woman mountain biking,mountain biking;woman;bike,Activities,U+1F6B5 U+200D U+2640 U+FE0F
+🚵,person mountain biking,mountain biking;bike;sport,Activities,U+1F6B5
+🚵‍♂️,man mountain biking,mountain biking;man;bike,Activities,U+1F6B5 U+200D U+2642 U+FE0F
+🚴‍♀️,woman biking,biking;woman;bicycle,Activities,U+1F6B4 U+200D U+2640 U+FE0F
+🚴,person biking,biking;bicycle;sport,Activities,U+1F6B4
+🚴‍♂️,man biking,biking;man;bicycle,Activities,U+1F6B4 U+200D U+2642 U+FE0F
+🏆,trophy,trophy;award;winner,Activities,U+1F3C6
+🥇,1st place medal,gold;medal;first;winner,Activities,U+1F947
+🥈,2nd place medal,silver;medal;second,Activities,U+1F948
+🥉,3rd place medal,bronze;medal;third,Activities,U+1F949
+🏅,sports medal,medal;sport;award,Activities,U+1F3C5
+🎖️,military medal,military;medal;honor,Activities,U+1F396 U+FE0F
+🏵️,rosette,rosette;award;ribbon,Activities,U+1F3F5 U+FE0F
+🎗️,reminder ribbon,ribbon;reminder;awareness,Activities,U+1F397 U+FE0F
+🎫,ticket,ticket;event;admission,Activities,U+1F3AB
+🎟️,admission tickets,tickets;admission;event,Activities,U+1F39F U+FE0F
+🎪,circus tent,circus;tent;entertainment,Activities,U+1F3AA
+🤹‍♀️,woman juggling,juggling;woman;circus,Activities,U+1F939 U+200D U+2640 U+FE0F
+🤹,person juggling,juggling;circus;skill,Activities,U+1F939
+🤹‍♂️,man juggling,juggling;man;circus,Activities,U+1F939 U+200D U+2642 U+FE0F
+🎭,performing arts,theater;drama;masks,Activities,U+1F3AD
+🩰,ballet shoes,ballet;dance;shoes,Activities,U+1FA70
+🎨,artist palette,art;paint;palette,Activities,U+1F3A8
+🎬,clapper board,movie;film;cinema,Activities,U+1F3AC
+🎤,microphone,microphone;sing;karaoke,Activities,U+1F3A4
+🎧,headphone,headphones;music;listen,Activities,U+1F3A7
+🎼,musical score,music;notes;score,Activities,U+1F3BC
+🎵,musical note,music;note;sound,Activities,U+1F3B5
+🎶,musical notes,music;notes;sound,Activities,U+1F3B6
+🥁,drum,drum;music;beat,Activities,U+1F941
+🪘,long drum,drum;long;music,Activities,U+1FA98
+🎹,musical keyboard,piano;keyboard;music,Activities,U+1F3B9
+🎷,saxophone,saxophone;music;jazz,Activities,U+1F3B7
+🎺,trumpet,trumpet;music;brass,Activities,U+1F3BA
+🪗,accordion,accordion;music;folk,Activities,U+1FA97
+🎸,guitar,guitar;music;rock,Activities,U+1F3B8
+🪕,banjo,banjo;music;country,Activities,U+1FA95
+🎻,violin,violin;music;classical,Activities,U+1F3BB
+🎲,game die,dice;game;random,Activities,U+1F3B2
+♟️,chess pawn,chess;pawn;strategy,Activities,U+265F U+FE0F
+🎯,direct hit,target;bullseye;dart,Activities,U+1F3AF
+🎳,bowling,bowling;sport;pins,Activities,U+1F3B3
+🎮,video game,video game;controller;gaming,Activities,U+1F3AE
+🎰,slot machine,slot machine;gambling;casino,Activities,U+1F3B0
+🧩,puzzle piece,puzzle;piece;jigsaw,Activities,U+1F9E9
+🚗,automobile,car;vehicle;drive,Travel & Places,U+1F697
+🚕,taxi,taxi;cab;yellow,Travel & Places,U+1F695
+🚙,sport utility vehicle,suv;car;vehicle,Travel & Places,U+1F699
+🚌,bus,bus;public transport;vehicle,Travel & Places,U+1F68C
+🚎,trolleybus,trolley;bus;transport,Travel & Places,U+1F68E
+🏎️,racing car,race car;fast;speed,Travel & Places,U+1F3CE U+FE0F
+🚓,police car,police;cop;law,Travel & Places,U+1F693
+🚑,ambulance,ambulance;emergency;medical,Travel & Places,U+1F691
+🚒,fire engine,fire truck;emergency;firefighter,Travel & Places,U+1F692
+🚐,minibus,minibus;van;transport,Travel & Places,U+1F690
+🛻,pickup truck,pickup;truck;vehicle,Travel & Places,U+1F6FB
+🚚,delivery truck,truck;delivery;transport,Travel & Places,U+1F69A
+🚛,articulated lorry,truck;semi;transport,Travel & Places,U+1F69B
+🚜,tractor,tractor;farm;agriculture,Travel & Places,U+1F69C
+🏍️,motorcycle,motorcycle;bike;motor,Travel & Places,U+1F3CD U+FE0F
+🛵,motor scooter,scooter;motor;vespa,Travel & Places,U+1F6F5
+🚲,bicycle,bike;bicycle;cycle,Travel & Places,U+1F6B2
+🛴,kick scooter,scooter;kick;ride,Travel & Places,U+1F6F4
+🛹,skateboard,skateboard;skate;board,Travel & Places,U+1F6F9
+🛼,roller skate,roller skate;retro;wheels,Travel & Places,U+1F6FC
+🚁,helicopter,helicopter;chopper;fly,Travel & Places,U+1F681
+🛸,flying saucer,ufo;alien;spaceship,Travel & Places,U+1F6F8
+✈️,airplane,airplane;plane;fly;travel,Travel & Places,U+2708 U+FE0F
+🛩️,small airplane,small plane;airplane;fly,Travel & Places,U+1F6E9 U+FE0F
+🛫,airplane departure,takeoff;departure;fly,Travel & Places,U+1F6EB
+🛬,airplane arrival,landing;arrival;fly,Travel & Places,U+1F6EC
+🪂,parachute,parachute;skydiving;fall,Travel & Places,U+1FA82
+💺,seat,seat;chair;airplane,Travel & Places,U+1F4BA
+🚀,rocket,rocket;space;launch,Travel & Places,U+1F680
+🛰️,satellite,satellite;space;communication,Travel & Places,U+1F6F0 U+FE0F
+🚉,station,station;train;platform,Travel & Places,U+1F689
+🚊,tram,tram;streetcar;transport,Travel & Places,U+1F68A
+🚝,monorail,monorail;train;transport,Travel & Places,U+1F69D
+🚞,mountain railway,mountain train;railway;scenic,Travel & Places,U+1F69E
+🚋,tram car,tram;streetcar;transport,Travel & Places,U+1F68B
+🚃,railway car,train;car;railway,Travel & Places,U+1F683
+🚄,high-speed train,bullet train;fast;japan,Travel & Places,U+1F684
+🚅,bullet train,bullet train;fast;shinkansen,Travel & Places,U+1F685
+🚈,light rail,light rail;train;transport,Travel & Places,U+1F688
+🚂,locomotive,train;locomotive;steam,Travel & Places,U+1F682
+🚆,train,train;railway;transport,Travel & Places,U+1F686
+🚇,metro,subway;metro;underground,Travel & Places,U+1F687
+🚟,suspension railway,suspension;railway;transport,Travel & Places,U+1F69F
+🚠,mountain cableway,cable car;mountain;transport,Travel & Places,U+1F6A0
+🚡,aerial tramway,aerial;tramway;cable,Travel & Places,U+1F6A1
+🛎️,bellhop bell,bell;hotel;service,Travel & Places,U+1F6CE U+FE0F
+🧳,luggage,luggage;suitcase;travel,Travel & Places,U+1F9F3
+⌚,watch,watch;time;wrist,Objects,U+231A
+📱,mobile phone,phone;mobile;cell;smartphone,Objects,U+1F4F1
+📲,mobile phone with arrow,phone;call;incoming,Objects,U+1F4F2
+💻,laptop,laptop;computer;pc,Objects,U+1F4BB
+⌨️,keyboard,keyboard;computer;type,Objects,U+2328 U+FE0F
+🖥️,desktop computer,computer;desktop;monitor,Objects,U+1F5A5 U+FE0F
+🖨️,printer,printer;print;office,Objects,U+1F5A8 U+FE0F
+🖱️,computer mouse,mouse;computer;click,Objects,U+1F5B1 U+FE0F
+🖲️,trackball,trackball;computer;mouse,Objects,U+1F5B2 U+FE0F
+🕹️,joystick,joystick;game;controller,Objects,U+1F579 U+FE0F
+🗜️,computer disk,disk;minidisc;storage,Objects,U+1F4BD
+💾,floppy disk,floppy;disk;save,Objects,U+1F4BE
+💿,optical disk,cd;disk;music,Objects,U+1F4BF
+📀,dvd,dvd;disk;movie,Objects,U+1F4C0
+📼,videocassette,vhs;tape;video,Objects,U+1F4FC
+📷,camera,camera;photo;picture,Objects,U+1F4F7
+📸,camera with flash,camera;flash;photo,Objects,U+1F4F8
+📹,video camera,video;camera;record,Objects,U+1F4F9
+🎥,movie camera,movie;film;camera,Objects,U+1F3A5
+📽️,film projector,projector;film;movie,Objects,U+1F4FD U+FE0F
+🎞️,film frames,film;frames;movie,Objects,U+1F39E U+FE0F
+📞,telephone receiver,phone;telephone;call,Objects,U+1F4DE
+☎️,telephone,phone;telephone;old,Objects,U+260E U+FE0F
+📟,pager,pager;beeper;communication,Objects,U+1F4DF
+📠,fax machine,fax;machine;office,Objects,U+1F4E0
+📺,television,tv;television;screen,Objects,U+1F4FA
+📻,radio,radio;music;broadcast,Objects,U+1F4FB
+🎙️,studio microphone,microphone;studio;broadcast,Objects,U+1F399 U+FE0F
+🎚️,level slider,slider;level;control,Objects,U+1F39A U+FE0F
+🎛️,control knobs,knobs;control;mixer,Objects,U+1F39B U+FE0F
+🧭,compass,compass;direction;navigation,Objects,U+1F9ED
+⏱️,stopwatch,stopwatch;timer;time,Objects,U+23F1 U+FE0F
+⏲️,timer clock,timer;clock;time,Objects,U+23F2 U+FE0F
+⏰,alarm clock,alarm;clock;wake up,Objects,U+23F0
+🕰,mantelpiece clock,clock;mantle;time,Objects,U+1F570
+⌛,hourglass done,hourglass;time;sand,Objects,U+231B
+⏳,hourglass not done,hourglass;time;waiting,Objects,U+23F3
+📡,satellite antenna,satellite;antenna;communication,Objects,U+1F4E1
+🔋,battery,battery;power;energy,Objects,U+1F50B
+🔌,electric plug,plug;electric;power,Objects,U+1F50C
+💡,light bulb,bulb;light;idea,Objects,U+1F4A1
+🔦,flashlight,flashlight;torch;light,Objects,U+1F526
+🕯️,candle,candle;light;flame,Objects,U+1F56F U+FE0F
+🪔,diya lamp,diya;lamp;oil,Objects,U+1FA94
+🧯,fire extinguisher,fire extinguisher;safety;emergency,Objects,U+1F9EF
+🛢️,oil drum,oil;drum;barrel,Objects,U+1F6E2 U+FE0F
+💸,money with wings,money;flying;expensive,Objects,U+1F4B8
+💵,dollar banknote,dollar;money;cash,Objects,U+1F4B5
+💴,yen banknote,yen;money;japanese,Objects,U+1F4B4
+💶,euro banknote,euro;money;european,Objects,U+1F4B6
+💷,pound banknote,pound;money;british,Objects,U+1F4B7
+🪙,coin,coin;money;currency,Objects,U+1FA99
+💰,money bag,money;bag;rich,Objects,U+1F4B0
+💳,credit card,credit card;payment;money,Objects,U+1F4B3
+💎,gem stone,diamond;gem;precious,Objects,U+1F48E
+❤️,red heart,love;heart;red,Symbols,U+2764 U+FE0F
+🧡,orange heart,love;heart;orange,Symbols,U+1F9E1
+💛,yellow heart,love;heart;yellow,Symbols,U+1F49B
+💚,green heart,love;heart;green,Symbols,U+1F49A
+💙,blue heart,love;heart;blue,Symbols,U+1F499
+💜,purple heart,love;heart;purple,Symbols,U+1F49C
+🖤,black heart,love;heart;black,Symbols,U+1F5A4
+🤍,white heart,love;heart;white,Symbols,U+1F90D
+🤎,brown heart,love;heart;brown,Symbols,U+1F90E
+💔,broken heart,broken;heart;sad,Symbols,U+1F494
+❣️,heart exclamation,heart;exclamation,,
