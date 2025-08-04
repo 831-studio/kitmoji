@@ -9,17 +9,14 @@
       }
     },
     {
-      "src": "server/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["emojis.db", "kitmoji-emojis.db"]
-      }
+      "src": "server/postgres-index.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/index.js"
+      "dest": "/server/postgres-index.js"
     },
     {
       "src": "/(.*)",
