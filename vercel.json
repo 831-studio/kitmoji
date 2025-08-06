@@ -20,11 +20,11 @@
     },
     {
       "src": "/sitemap.xml",
-      "dest": "/server/postgres-index.js"
+      "dest": "/sitemap.xml"
     },
     {
-      "src": "/robots.txt",
-      "dest": "/server/postgres-index.js"
+      "src": "/robots.txt", 
+      "dest": "/robots.txt"
     },
     {
       "src": "/(.*)",

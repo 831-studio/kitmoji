@@ -331,42 +331,7 @@ app.get('/api/fix-emojis', async (req, res) => {
   }
 });
 
-// Generate sitemap.xml for SEO
-app.get('/sitemap.xml', (req, res) => {
-  try {
-    // Use string concatenation instead of template literals
-    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-    sitemap += '<url>';
-    sitemap += '<loc>https://www.kitmoji.net/</loc>';
-    sitemap += '<lastmod>2025-08-06T03:36:00.000Z</lastmod>';
-    sitemap += '<changefreq>daily</changefreq>';
-    sitemap += '<priority>1.0</priority>';
-    sitemap += '</url>';
-    sitemap += '<url>';
-    sitemap += '<loc>https://www.kitmoji.net/unicode</loc>';
-    sitemap += '<lastmod>2025-08-06T03:36:00.000Z</lastmod>';
-    sitemap += '<changefreq>weekly</changefreq>';
-    sitemap += '<priority>0.9</priority>';
-    sitemap += '</url>';
-    sitemap += '</urlset>';
-
-    res.setHeader('Content-Type', 'application/xml; charset=utf-8');
-    res.send(sitemap);
-  } catch (error) {
-    console.error('Sitemap error:', error);
-    res.status(500).send('Sitemap error');
-  }
-});
-
-// Robots.txt for SEO
-app.get('/robots.txt', (req, res) => {
-  res.setHeader('Content-Type', 'text/plain');
-  res.send(`User-agent: *
-Allow: /
-
-Sitemap: https://www.kitmoji.net/sitemap.xml`);
-});
+// Static files (sitemap.xml and robots.txt) are now served from /public directory
 
 app.listen(PORT, () => {
   console.log(`Kitmoji server with Postgres running on http://localhost:${PORT}`);
