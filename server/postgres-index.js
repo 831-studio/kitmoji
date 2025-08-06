@@ -150,6 +150,40 @@ app.get('/api/emoji/:name', async (req, res) => {
       const basic = slug.replace(/-/g, ' ');
       variants.push(basic);
       
+      // Handle compound words that might have internal hyphens
+      // "smiling-face-with-heart-eyes" could be "smiling face with heart-eyes"
+      const words = slug.split('-');
+      if (words.length > 2) {
+        // Try variations where compound words keep their hyphens
+        // Look for common compound patterns
+        const compoundPatterns = ['heart-eyes', 'one-piece', 'up-down', 'left-right', 'e-mail', 't-shirt', 'p-button'];
+        
+        for (const pattern of compoundPatterns) {
+          const patternWords = pattern.split('-');
+          const patternIndex = words.findIndex((w, i) => 
+            i < words.length - 1 && 
+            w === patternWords[0] && 
+            words[i + 1] === patternWords[1]
+          );
+          
+          if (patternIndex !== -1) {
+            const modifiedWords = [...words];
+            modifiedWords[patternIndex] = pattern;
+            modifiedWords.splice(patternIndex + 1, patternWords.length - 1);
+            const variant = modifiedWords.join(' ').replace(/-/g, (match, offset, string) => {
+              // Keep hyphens that are part of compound words
+              const beforeChar = string[offset - 1];
+              const afterChar = string[offset + 1];
+              if (beforeChar && afterChar && beforeChar !== ' ' && afterChar !== ' ') {
+                return '-';
+              }
+              return ' ';
+            });
+            variants.push(variant);
+          }
+        }
+      }
+      
       // Handle skin tone patterns: "artist-dark-skin-tone" -> "artist: dark skin tone"
       const skinTonePattern = /^(.+)-(light|medium-light|medium|medium-dark|dark)-skin-tone$/;
       const skinToneMatch = slug.match(skinTonePattern);
