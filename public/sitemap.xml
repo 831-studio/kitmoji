@@ -2,32 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.kitmoji.net/</loc>
-    <lastmod>2025-08-06T03:36:00.000Z</lastmod>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.kitmoji.net/unicode</loc>
-    <lastmod>2025-08-06T03:36:00.000Z</lastmod>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.kitmoji.net/all-emojis</loc>
-    <lastmod>2025-08-06T03:36:00.000Z</lastmod>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.kitmoji.net/popular-emojis</loc>
-    <lastmod>2025-08-06T03:36:00.000Z</lastmod>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.kitmoji.net/new-emojis</loc>
-    <lastmod>2025-08-06T03:36:00.000Z</lastmod>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/grinning-face</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/red-heart</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/thumbs-up</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/fire</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/face-with-tears-of-joy</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/smiling-face-with-heart-eyes</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/ok-hand</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/waving-hand</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/clapping-hands</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/folded-hands</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/hundred-points</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/sparkles</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/party-popper</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/birthday-cake</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/smileys-emotion</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/people-body</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/animals-nature</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/food-drink</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/travel-places</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/activities</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/objects</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/symbols</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/flags</loc>
+    <lastmod>2025-08-06T14:39:45.673Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

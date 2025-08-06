@@ -15,12 +15,12 @@
   ],
   "routes": [
     {
-      "src": "/sitemap.xml",
-      "dest": "/api/sitemap.xml.js"
-    },
-    {
       "src": "/api/(.*)",
       "dest": "/server/postgres-index.js"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/dist/sitemap.xml"
     },
     {
       "src": "/robots.txt", 
