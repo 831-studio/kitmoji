@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { TrendingUp, Star, Copy, ExternalLink } from 'lucide-react'
+import { Copy, ExternalLink } from 'lucide-react'
 import { Emoji } from '../types/emoji'
 import { generateEmojiSlug } from '../utils/emojiUtils'
 
@@ -77,27 +77,6 @@ function PopularEmojis() {
     }
   }
 
-  const getTrendIcon = (trend: 'up' | 'down' | 'stable') => {
-    switch (trend) {
-      case 'up':
-        return <TrendingUp className="w-4 h-4 text-green-500" />
-      case 'down':
-        return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />
-      default:
-        return <div className="w-4 h-4 bg-gray-400 rounded-full" />
-    }
-  }
-
-  const getTrendColor = (trend: 'up' | 'down' | 'stable') => {
-    switch (trend) {
-      case 'up':
-        return 'text-green-600 bg-green-50'
-      case 'down':
-        return 'text-red-600 bg-red-50'
-      default:
-        return 'text-gray-600 bg-gray-50'
-    }
-  }
 
   if (loading) {
     return (

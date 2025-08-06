@@ -147,9 +147,6 @@ function EmojiDetail() {
     }
   }
 
-  const formatUnicode = (unicode: string) => {
-    return unicode.split(' ').map(code => `U+${code.padStart(4, '0').toUpperCase()}`).join(' ')
-  }
 
   const formatKeywords = (keywords: string) => {
     return keywords.split(/[,;]/).map(k => k.trim()).filter(k => k.length > 0)
