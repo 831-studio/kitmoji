@@ -49,39 +49,44 @@ export default async function handler(req, res) {
     <priority>0.8</priority>
   </url>`;
 
-    // Get all categories
-    const categories = await sql`SELECT DISTINCT category FROM emojis WHERE category IS NOT NULL ORDER BY category`;
-    
-    // Add category pages
-    categories.rows.forEach(row => {
-      const categorySlug = row.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-      if (categorySlug && categorySlug.length > 0) {
-        sitemap += `
+    try {
+      // Get all categories
+      const categories = await sql`SELECT DISTINCT category FROM emojis WHERE category IS NOT NULL ORDER BY category LIMIT 20`;
+      
+      // Add category pages
+      for (const row of categories.rows) {
+        const categorySlug = row.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+        if (categorySlug && categorySlug.length > 0) {
+          sitemap += `
   <url>
     <loc>https://www.kitmoji.net/category/${categorySlug}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>`;
+        }
       }
-    });
 
-    // Get all emojis for individual pages
-    const emojis = await sql`SELECT name FROM emojis ORDER BY id`;
-    
-    // Add individual emoji pages
-    emojis.rows.forEach(row => {
-      const emojiSlug = generateEmojiSlug(row.name);
-      if (emojiSlug && emojiSlug.length > 0) {
-        sitemap += `
+      // Get all emojis for individual pages (limit first batch for testing)
+      const emojis = await sql`SELECT name FROM emojis ORDER BY id LIMIT 100`;
+      
+      // Add individual emoji pages
+      for (const row of emojis.rows) {
+        const emojiSlug = generateEmojiSlug(row.name);
+        if (emojiSlug && emojiSlug.length > 0) {
+          sitemap += `
   <url>
     <loc>https://www.kitmoji.net/emoji/${emojiSlug}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`;
+        }
       }
-    });
+    } catch (dbError) {
+      console.error('Database query failed:', dbError);
+      // Continue with just static pages if database fails
+    }
 
     sitemap += `
 </urlset>`;
