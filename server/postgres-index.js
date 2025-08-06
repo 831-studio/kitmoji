@@ -140,17 +140,59 @@ app.get('/api/emojis/:id', async (req, res) => {
 app.get('/api/emoji/:name', async (req, res) => {
   try {
     const { name } = req.params;
-    // Convert URL slug back to searchable name
-    const searchName = name.replace(/-/g, ' ');
     
-    const result = await sql`
-      SELECT * FROM emojis 
-      WHERE name ILIKE ${`%${searchName}%`}
-      ORDER BY 
-        CASE WHEN LOWER(name) = LOWER(${searchName}) THEN 1 ELSE 2 END,
-        LENGTH(name)
-      LIMIT 1
-    `;
+    // Function to convert slug back to potential emoji names
+    function generateSearchVariants(slug) {
+      const variants = [];
+      
+      // Basic: replace hyphens with spaces
+      const basic = slug.replace(/-/g, ' ');
+      variants.push(basic);
+      
+      // Handle skin tone patterns: "artist-dark-skin-tone" -> "artist: dark skin tone"
+      const skinTonePattern = /^(.+)-(light|medium-light|medium|medium-dark|dark)-skin-tone$/;
+      const skinToneMatch = slug.match(skinTonePattern);
+      if (skinToneMatch) {
+        const baseName = skinToneMatch[1].replace(/-/g, ' ');
+        const skinTone = skinToneMatch[2];
+        variants.push(`${baseName}: ${skinTone} skin tone`);
+      }
+      
+      // Handle other colon patterns
+      const colonPattern = /^(.+)-(light|medium-light|medium|medium-dark|dark)$/;
+      const colonMatch = slug.match(colonPattern);
+      if (colonMatch) {
+        const baseName = colonMatch[1].replace(/-/g, ' ');
+        const modifier = colonMatch[2];
+        variants.push(`${baseName}: ${modifier}`);
+      }
+      
+      return variants;
+    }
+    
+    const searchVariants = generateSearchVariants(name);
+    let result;
+    
+    // Try exact matches for each variant
+    for (const variant of searchVariants) {
+      result = await sql`SELECT * FROM emojis WHERE LOWER(name) = LOWER(${variant}) LIMIT 1`;
+      if (result.rows.length > 0) {
+        break;
+      }
+    }
+    
+    // If no exact match, try partial matches
+    if (result.rows.length === 0) {
+      const searchName = name.replace(/-/g, ' ');
+      result = await sql`
+        SELECT * FROM emojis 
+        WHERE name ILIKE ${`%${searchName}%`}
+        ORDER BY 
+          CASE WHEN LOWER(name) = LOWER(${searchName}) THEN 1 ELSE 2 END,
+          LENGTH(name)
+        LIMIT 1
+      `;
+    }
     
     if (result.rows.length === 0) {
       return res.status(404).json({ error: 'Emoji not found' });
