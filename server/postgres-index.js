@@ -340,7 +340,7 @@ app.get('/robots.txt', (req, res) => {
   res.send(`User-agent: *
 Allow: /
 
-Sitemap: https://kitmoji.com/sitemap.xml`);
+Sitemap: https://www.kitmoji.net/sitemap.xml`);
 });
 
 app.listen(PORT, () => {

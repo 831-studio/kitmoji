@@ -40,7 +40,7 @@ async function generateSitemap(req, res) {
     staticPages.forEach(page => {
       sitemap += `
   <url>
-    <loc>https://kitmoji.com${page.url}</loc>
+    <loc>https://www.kitmoji.net${page.url}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
@@ -52,7 +52,7 @@ async function generateSitemap(req, res) {
       const categorySlug = row.category.toLowerCase().replace(/\s+/g, '-');
       sitemap += `
   <url>
-    <loc>https://kitmoji.com/category/${categorySlug}</loc>
+    <loc>https://www.kitmoji.net/category/${categorySlug}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -64,7 +64,7 @@ async function generateSitemap(req, res) {
       const emojiSlug = generateEmojiSlug(row.name);
       sitemap += `
   <url>
-    <loc>https://kitmoji.com/emoji/${emojiSlug}</loc>
+    <loc>https://www.kitmoji.net/emoji/${emojiSlug}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
