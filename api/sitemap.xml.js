@@ -1,21 +1,9 @@
-// Vercel serverless function for comprehensive sitemap
-import { sql } from '@vercel/postgres';
-
-// Helper function to generate emoji slug consistently
-const generateEmojiSlug = (name) => {
-  return name
-    .toLowerCase()
-    .replace(/[:\s]+/g, '-')
-    .replace(/[^a-z0-9-]/g, '')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '');
-};
-
+// Vercel serverless function with hardcoded emoji pages for testing
 export default async function handler(req, res) {
   try {
     const now = new Date().toISOString();
     
-    // Static pages
+    // Static pages + some hardcoded emoji pages to test
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -47,46 +35,37 @@ export default async function handler(req, res) {
     <lastmod>${now}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>`;
-
-    try {
-      // Get all categories
-      const categories = await sql`SELECT DISTINCT category FROM emojis WHERE category IS NOT NULL ORDER BY category LIMIT 20`;
-      
-      // Add category pages
-      for (const row of categories.rows) {
-        const categorySlug = row.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-        if (categorySlug && categorySlug.length > 0) {
-          sitemap += `
+  </url>
   <url>
-    <loc>https://www.kitmoji.net/category/${categorySlug}</loc>
+    <loc>https://www.kitmoji.net/emoji/grinning-face</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/red-heart</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/thumbs-up</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/emoji/fire</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/category/smileys-emotion</loc>
     <lastmod>${now}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>`;
-        }
-      }
-
-      // Get all emojis for individual pages (limit first batch for testing)
-      const emojis = await sql`SELECT name FROM emojis ORDER BY id LIMIT 100`;
-      
-      // Add individual emoji pages
-      for (const row of emojis.rows) {
-        const emojiSlug = generateEmojiSlug(row.name);
-        if (emojiSlug && emojiSlug.length > 0) {
-          sitemap += `
-  <url>
-    <loc>https://www.kitmoji.net/emoji/${emojiSlug}</loc>
-    <lastmod>${now}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>`;
-        }
-      }
-    } catch (dbError) {
-      console.error('Database query failed:', dbError);
-      // Continue with just static pages if database fails
-    }
 
     sitemap += `
 </urlset>`;
