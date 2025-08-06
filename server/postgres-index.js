@@ -136,6 +136,32 @@ app.get('/api/emojis/:id', async (req, res) => {
   }
 });
 
+// Get emoji by name (for SEO-friendly URLs)
+app.get('/api/emoji/:name', async (req, res) => {
+  try {
+    const { name } = req.params;
+    // Convert URL slug back to searchable name
+    const searchName = name.replace(/-/g, ' ');
+    
+    const result = await sql`
+      SELECT * FROM emojis 
+      WHERE name ILIKE ${`%${searchName}%`}
+      ORDER BY 
+        CASE WHEN LOWER(name) = LOWER(${searchName}) THEN 1 ELSE 2 END,
+        LENGTH(name)
+      LIMIT 1
+    `;
+    
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Emoji not found' });
+    }
+    
+    res.json(result.rows[0]);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Add new emoji
 app.post('/api/emojis', async (req, res) => {
   try {

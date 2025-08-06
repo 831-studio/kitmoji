@@ -5,9 +5,10 @@ interface LoadMoreButtonProps {
   onClick: () => void
   loading?: boolean
   hasMore?: boolean
+  text?: string
 }
 
-const LoadMoreButton = ({ onClick, loading = false, hasMore = true }: LoadMoreButtonProps) => {
+const LoadMoreButton = ({ onClick, loading = false, hasMore = true, text = "Load More" }: LoadMoreButtonProps) => {
   if (!hasMore) {
     return (
       <div className="text-center py-8">
@@ -32,7 +33,7 @@ const LoadMoreButton = ({ onClick, loading = false, hasMore = true }: LoadMoreBu
           </>
         ) : (
           <>
-            <span>Load More</span>
+            <span>{text}</span>
             <ChevronDown size={20} />
           </>
         )}

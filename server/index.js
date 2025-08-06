@@ -10,15 +10,15 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-// Database connection with debugging - try multiple paths including new DB name
+// Database connection with debugging - prioritize the full database
 let dbPath;
 const possiblePaths = [
-  path.join(__dirname, 'emojis.db'),           // server/emojis.db
-  path.join(__dirname, '..', 'emojis.db'),     // ./emojis.db
-  path.join(__dirname, '..', 'kitmoji-emojis.db'), // ./kitmoji-emojis.db (new)
-  path.join(process.cwd(), 'kitmoji-emojis.db'),   // process root (new)
-  path.join(process.cwd(), 'emojis.db'),       // process root
-  path.join(process.cwd(), 'server', 'emojis.db'), // process root + server
+  path.join(__dirname, '..', 'kitmoji-emojis.db'), // ./kitmoji-emojis.db (full database)
+  path.join(process.cwd(), 'kitmoji-emojis.db'),   // process root (full database)
+  path.join(__dirname, 'emojis.db'),           // server/emojis.db (fallback)
+  path.join(__dirname, '..', 'emojis.db'),     // ./emojis.db (fallback)
+  path.join(process.cwd(), 'emojis.db'),       // process root (fallback)
+  path.join(process.cwd(), 'server', 'emojis.db'), // process root + server (fallback)
 ];
 
 for (const testPath of possiblePaths) {
@@ -54,7 +54,9 @@ const db = new sqlite3.Database(dbPath, (err) => {
 app.get('/api/emojis/popular', (req, res) => {
   const popularEmojis = [
     '😀', '😂', '❤️', '😍', '🥰', '😊', '🔥', '💯', '✨', '🎉',
-    '👍', '🙏', '💖', '😘', '💕', '😭'
+    '👍', '🙏', '💖', '😘', '💕', '😭', '🤣', '🥳', '😎', '🤗',
+    '😇', '🙃', '😉', '🤔', '🥺', '😌', '😴', '🤤', '🤪', '🤯',
+    '🥶', '🤩', '🤖', '👏', '🤝', '💪', '🧠', '👀', '💋', '🔥'
   ];
   
   const query = `SELECT * FROM emojis WHERE emoji IN (${popularEmojis.map(() => '?').join(', ')}) ORDER BY CASE emoji ${popularEmojis.map((_, i) => `WHEN ? THEN ${i}`).join(' ')} END`;
@@ -141,6 +143,40 @@ app.get('/api/emojis/:id', (req, res) => {
   });
 });
 
+// Get emoji by name (for SEO-friendly URLs)
+app.get('/api/emoji/:name', (req, res) => {
+  const { name } = req.params;
+  // Convert URL slug back to searchable name with flexible matching
+  const searchName = name.replace(/-/g, ' ');
+  
+  db.get(
+    `SELECT * FROM emojis 
+     WHERE LOWER(REPLACE(REPLACE(name, ':', ''), '-', ' ')) = LOWER(?)
+     OR LOWER(REPLACE(name, ':', '')) LIKE LOWER(?)
+     OR LOWER(name) LIKE LOWER(?)
+     OR LOWER(REPLACE(REPLACE(name, ' ', '-'), ':', '')) LIKE LOWER(?)
+     ORDER BY 
+       CASE 
+         WHEN LOWER(REPLACE(REPLACE(name, ':', ''), '-', ' ')) = LOWER(?) THEN 1 
+         WHEN LOWER(REPLACE(name, ':', '')) = LOWER(?) THEN 2 
+         WHEN LOWER(name) = LOWER(?) THEN 3 
+         ELSE 4 
+       END,
+       LENGTH(name)
+     LIMIT 1`,
+    [searchName, `%${searchName}%`, `%${searchName}%`, `%${name}%`, searchName, searchName, searchName],
+    (err, row) => {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+      if (!row) {
+        return res.status(404).json({ error: 'Emoji not found' });
+      }
+      res.json(row);
+    }
+  );
+});
+
 // Add new emoji
 app.post('/api/emojis', (req, res) => {
   const { emoji, name, keywords, category, unicode } = req.body;
@@ -196,6 +232,64 @@ app.delete('/api/emojis/:id', (req, res) => {
   });
 });
 
+
+// Fix emoji encoding (GET version for easy browser access)
+app.get('/api/fix-emojis', (req, res) => {
+  console.log('🔧 Starting emoji encoding fix...');
+  
+  function unicodeToEmoji(unicode) {
+    try {
+      // Handle both "U+1F600" and "1F600" formats
+      const cleanUnicode = unicode.replace(/U\+/g, '').trim();
+      const codepoints = cleanUnicode.split(/[\s-]+/).filter(cp => cp.trim());
+      let emoji = '';
+      for (const codepoint of codepoints) {
+        const cleanCodepoint = codepoint.trim().toUpperCase();
+        if (cleanCodepoint && cleanCodepoint !== 'FE0F') {
+          const code = parseInt(cleanCodepoint, 16);
+          if (code && code > 0) {
+            emoji += String.fromCodePoint(code);
+          }
+        }
+      }
+      return emoji || '❓';
+    } catch (error) {
+      return '❓';
+    }
+  }
+  
+  // Get all emojis
+  db.all('SELECT id, unicode, name FROM emojis ORDER BY id', (err, emojis) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    
+    let fixed = 0;
+    const updatePromises = emojis.map((emoji) => {
+      return new Promise((resolve) => {
+        const correctEmoji = unicodeToEmoji(emoji.unicode);
+        db.run('UPDATE emojis SET emoji = ? WHERE id = ?', [correctEmoji, emoji.id], (updateErr) => {
+          if (!updateErr) {
+            fixed++;
+          }
+          resolve();
+        });
+      });
+    });
+    
+    Promise.all(updatePromises).then(() => {
+      // Test results
+      db.all('SELECT emoji, name FROM emojis WHERE name LIKE "%grinning%" OR name LIKE "%heart%" OR name LIKE "%thumbs%" LIMIT 5', (testErr, testResults) => {
+        res.json({
+          success: true,
+          message: `Fixed ${fixed} emojis`,
+          total: emojis.length,
+          test: testResults ? testResults.map(row => ({ emoji: row.emoji, name: row.name })) : []
+        });
+      });
+    });
+  });
+});
 
 // Health check with database info
 app.get('/api/health', (req, res) => {

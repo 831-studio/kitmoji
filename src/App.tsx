@@ -4,6 +4,11 @@ import { Analytics } from '@vercel/analytics/react'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Unicode from './pages/Unicode'
+import EmojiDetail from './pages/EmojiDetail'
+import CategoryPage from './pages/CategoryPage'
+import AllEmojis from './pages/AllEmojis'
+import PopularEmojis from './pages/PopularEmojis'
+import NewEmojis from './pages/NewEmojis'
 
 function App() {
   return (
@@ -18,6 +23,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/unicode" element={<Unicode />} />
+          <Route path="/emoji/:emojiName" element={<EmojiDetail />} />
+          <Route path="/category/:categoryName" element={<CategoryPage />} />
+          <Route path="/all-emojis" element={<AllEmojis />} />
+          <Route path="/popular-emojis" element={<PopularEmojis />} />
+          <Route path="/new-emojis" element={<NewEmojis />} />
         </Routes>
       </motion.main>
       <Analytics />
