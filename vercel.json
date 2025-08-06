@@ -19,6 +19,14 @@
       "dest": "/server/postgres-index.js"
     },
     {
+      "src": "/sitemap.xml",
+      "dest": "/server/postgres-index.js"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/server/postgres-index.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "/dist/index.html"
     }
