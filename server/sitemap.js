@@ -11,6 +11,16 @@ const generateEmojiSlug = (name) => {
     .replace(/^-|-$/g, '');
 };
 
+// Helper function to escape XML entities
+const escapeXml = (unsafe) => {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+};
+
 // Generate sitemap XML
 async function generateSitemap(req, res) {
   try {
@@ -49,7 +59,7 @@ async function generateSitemap(req, res) {
 
     // Add category pages
     categories.rows.forEach(row => {
-      const categorySlug = row.category.toLowerCase().replace(/\s+/g, '-');
+      const categorySlug = escapeXml(row.category.toLowerCase().replace(/\s+/g, '-'));
       sitemap += `
   <url>
     <loc>https://www.kitmoji.net/category/${categorySlug}</loc>
@@ -61,7 +71,7 @@ async function generateSitemap(req, res) {
 
     // Add individual emoji pages
     emojis.rows.forEach(row => {
-      const emojiSlug = generateEmojiSlug(row.name);
+      const emojiSlug = escapeXml(generateEmojiSlug(row.name));
       sitemap += `
   <url>
     <loc>https://www.kitmoji.net/emoji/${emojiSlug}</loc>
@@ -75,7 +85,7 @@ async function generateSitemap(req, res) {
 </urlset>`;
 
     // Set appropriate headers
-    res.setHeader('Content-Type', 'application/xml');
+    res.setHeader('Content-Type', 'application/xml; charset=utf-8');
     res.setHeader('Cache-Control', 'public, max-age=86400'); // Cache for 24 hours
     
     res.send(sitemap);
