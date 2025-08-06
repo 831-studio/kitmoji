@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "setup-db": "node server/setup-database.js",
     "start": "node server/postgres-index.js",
-    "vercel-build": "node scripts/setup-vercel-postgres.js && tsc && vite build"
+    "vercel-build": "node scripts/setup-vercel-postgres.js && tsc && vite build && cp public/sitemap.xml dist/ && cp public/robots.txt dist/"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
