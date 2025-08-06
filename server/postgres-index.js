@@ -334,21 +334,22 @@ app.get('/api/fix-emojis', async (req, res) => {
 // Generate sitemap.xml for SEO
 app.get('/sitemap.xml', (req, res) => {
   try {
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.kitmoji.net/</loc>
-    <lastmod>2025-08-06T03:36:00.000Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.kitmoji.net/unicode</loc>
-    <lastmod>2025-08-06T03:36:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-</urlset>`;
+    // Use string concatenation instead of template literals
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+    sitemap += '<url>';
+    sitemap += '<loc>https://www.kitmoji.net/</loc>';
+    sitemap += '<lastmod>2025-08-06T03:36:00.000Z</lastmod>';
+    sitemap += '<changefreq>daily</changefreq>';
+    sitemap += '<priority>1.0</priority>';
+    sitemap += '</url>';
+    sitemap += '<url>';
+    sitemap += '<loc>https://www.kitmoji.net/unicode</loc>';
+    sitemap += '<lastmod>2025-08-06T03:36:00.000Z</lastmod>';
+    sitemap += '<changefreq>weekly</changefreq>';
+    sitemap += '<priority>0.9</priority>';
+    sitemap += '</url>';
+    sitemap += '</urlset>';
 
     res.setHeader('Content-Type', 'application/xml; charset=utf-8');
     res.send(sitemap);
