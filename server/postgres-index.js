@@ -210,7 +210,7 @@ app.get('/api/emoji/:name', async (req, res) => {
     
     // Try exact matches for each variant
     for (const variant of searchVariants) {
-      result = await sql`SELECT * FROM emojis WHERE LOWER(name) = LOWER(${variant}) LIMIT 1`;
+      result = await sql`SELECT *, COALESCE(copy_count, 0) as copy_count FROM emojis WHERE LOWER(name) = LOWER(${variant}) LIMIT 1`;
       if (result.rows.length > 0) {
         break;
       }
@@ -220,7 +220,7 @@ app.get('/api/emoji/:name', async (req, res) => {
     if (result.rows.length === 0) {
       const searchName = name.replace(/-/g, ' ');
       result = await sql`
-        SELECT * FROM emojis 
+        SELECT *, COALESCE(copy_count, 0) as copy_count FROM emojis 
         WHERE name ILIKE ${`%${searchName}%`}
         ORDER BY 
           CASE WHEN LOWER(name) = LOWER(${searchName}) THEN 1 ELSE 2 END,
@@ -303,6 +303,60 @@ app.delete('/api/emojis/:id', async (req, res) => {
     res.json({ message: 'Emoji deleted successfully' });
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+});
+
+// Track emoji copy
+app.post('/api/emoji/:id/copy', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    // Increment copy count
+    const result = await sql`
+      UPDATE emojis 
+      SET copy_count = COALESCE(copy_count, 0) + 1
+      WHERE id = ${id}
+      RETURNING copy_count
+    `;
+    
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Emoji not found' });
+    }
+    
+    res.json({ copy_count: result.rows[0].copy_count });
+  } catch (error) {
+    // If copy_count column doesn't exist, return a default value
+    if (error.message.includes('column "copy_count" of relation "emojis" does not exist')) {
+      res.json({ copy_count: 0 });
+    } else {
+      res.status(500).json({ error: error.message });
+    }
+  }
+});
+
+// Get emoji copy count
+app.get('/api/emoji/:id/copy-count', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    const result = await sql`
+      SELECT COALESCE(copy_count, 0) as copy_count 
+      FROM emojis 
+      WHERE id = ${id}
+    `;
+    
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Emoji not found' });
+    }
+    
+    res.json({ copy_count: result.rows[0].copy_count });
+  } catch (error) {
+    // If copy_count column doesn't exist, return a default value
+    if (error.message.includes('column "copy_count"')) {
+      res.json({ copy_count: 0 });
+    } else {
+      res.status(500).json({ error: error.message });
+    }
   }
 });
 

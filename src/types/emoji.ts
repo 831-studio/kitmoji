@@ -5,6 +5,7 @@ export interface Emoji {
   keywords: string;
   category: string;
   unicode: string;
+  copy_count?: number;
   created_at?: string;
   updated_at?: string;
 }

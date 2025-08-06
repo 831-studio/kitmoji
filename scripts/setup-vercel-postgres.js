@@ -32,6 +32,18 @@ async function setupVercelPostgres() {
       const existingCount = await sql`SELECT COUNT(*) as total FROM emojis`;
       if (existingCount.rows[0].total > 0) {
         console.log(`✅ Database already setup with ${existingCount.rows[0].total} emojis`);
+        
+        // Add copy_count column if it doesn't exist (for existing databases)
+        try {
+          await sql`
+            ALTER TABLE emojis 
+            ADD COLUMN IF NOT EXISTS copy_count INTEGER DEFAULT 0
+          `;
+          console.log('✅ Ensured copy_count column exists');
+        } catch (err) {
+          // Column might already exist, which is fine
+        }
+        
         return;
       }
     } catch (error) {
@@ -66,7 +78,13 @@ async function setupVercelPostgres() {
     await sql`CREATE INDEX IF NOT EXISTS idx_emojis_unicode ON emojis(unicode)`;
     await sql`CREATE INDEX IF NOT EXISTS idx_emojis_status ON emojis(status)`;
     
-    console.log('✅ Database schema created');
+    // Add copy_count column if it doesn't exist
+    await sql`
+      ALTER TABLE emojis 
+      ADD COLUMN IF NOT EXISTS copy_count INTEGER DEFAULT 0
+    `;
+    
+    console.log('✅ Database schema created with copy_count column');
     
     // Check if we have local SQLite data to migrate
     const sqlitePath = path.join(process.cwd(), 'kitmoji-emojis.db');

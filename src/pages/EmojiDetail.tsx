@@ -26,6 +26,9 @@ function EmojiDetail() {
           const foundEmoji = await response.json()
           setEmoji(foundEmoji)
           
+          // Set the copy count from the database
+          setCopyCount(foundEmoji.copy_count || 0)
+          
           // Fetch related emojis from same category
           const relatedResponse = await fetch(`/api/emojis?category=${encodeURIComponent(foundEmoji.category)}&limit=12`)
           const relatedData = await relatedResponse.json()
@@ -43,6 +46,9 @@ function EmojiDetail() {
           if (data.emojis && data.emojis.length > 0) {
             const foundEmoji = data.emojis[0]
             setEmoji(foundEmoji)
+            
+            // Set the copy count from the database
+            setCopyCount(foundEmoji.copy_count || 0)
             
             // Fetch related emojis from same category
             const relatedResponse = await fetch(`/api/emojis?category=${encodeURIComponent(foundEmoji.category)}&limit=12`)
@@ -91,6 +97,13 @@ function EmojiDetail() {
       setCopied(true)
       setCopyCount(prev => prev + 1)
       setTimeout(() => setCopied(false), 2000)
+      
+      // Track the copy in the database
+      fetch(`/api/emoji/${emoji.id}/copy`, { 
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      }).catch(err => console.log('Failed to track copy:', err))
+      
     } catch (error) {
       // Fallback for older browsers
       const textArea = document.createElement('textarea')
@@ -102,6 +115,12 @@ function EmojiDetail() {
       setCopied(true)
       setCopyCount(prev => prev + 1)
       setTimeout(() => setCopied(false), 2000)
+      
+      // Track the copy in the database
+      fetch(`/api/emoji/${emoji.id}/copy`, { 
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      }).catch(err => console.log('Failed to track copy:', err))
     }
   }
 
