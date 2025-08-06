@@ -1,6 +1,7 @@
 const express = require('express');
 const { sql } = require('@vercel/postgres');
 const cors = require('cors');
+const { generateSitemap } = require('./sitemap');
 
 const app = express();
 const PORT = 3001;
@@ -328,6 +329,18 @@ app.get('/api/fix-emojis', async (req, res) => {
     console.error('Fix failed:', error);
     res.status(500).json({ error: error.message });
   }
+});
+
+// Generate sitemap.xml for SEO
+app.get('/sitemap.xml', generateSitemap);
+
+// Robots.txt for SEO
+app.get('/robots.txt', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain');
+  res.send(`User-agent: *
+Allow: /
+
+Sitemap: https://kitmoji.com/sitemap.xml`);
 });
 
 app.listen(PORT, () => {
