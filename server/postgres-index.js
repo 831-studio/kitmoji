@@ -332,7 +332,31 @@ app.get('/api/fix-emojis', async (req, res) => {
 });
 
 // Generate sitemap.xml for SEO
-app.get('/sitemap.xml', generateSitemap);
+app.get('/sitemap.xml', (req, res) => {
+  try {
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.kitmoji.net/</loc>
+    <lastmod>2025-08-06T03:36:00.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.kitmoji.net/unicode</loc>
+    <lastmod>2025-08-06T03:36:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>`;
+
+    res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+    res.send(sitemap);
+  } catch (error) {
+    console.error('Sitemap error:', error);
+    res.status(500).send('Sitemap error');
+  }
+});
 
 // Robots.txt for SEO
 app.get('/robots.txt', (req, res) => {
