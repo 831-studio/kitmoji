@@ -13,22 +13,22 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/server/postgres-index.js"
+      "source": "/api/(.*)",
+      "destination": "/server/postgres-index.js"
     },
     {
-      "src": "/sitemap.xml",
-      "dest": "/dist/sitemap.xml"
+      "source": "/sitemap.xml",
+      "destination": "/dist/sitemap.xml"
     },
     {
-      "src": "/robots.txt", 
-      "dest": "/dist/robots.txt"
+      "source": "/robots.txt",
+      "destination": "/dist/robots.txt"
     },
     {
-      "src": "/(.*)",
-      "dest": "/dist/index.html"
+      "source": "/(.*)",
+      "destination": "/dist/index.html"
     }
   ]
 }
