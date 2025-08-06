@@ -52,6 +52,7 @@ const EmojiCard = ({ emoji, showUnicode = false, enableDetailLink = true }: Emoj
             <button
               onClick={(e) => {
                 e.stopPropagation()
+                e.preventDefault()
                 copyUnicode()
               }}
               className="w-full px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm rounded-lg flex items-center justify-center space-x-2 transition-colors border border-gray-300"
