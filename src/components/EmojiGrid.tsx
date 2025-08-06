@@ -52,7 +52,7 @@ const EmojiGrid = ({ emojis, loading = false, showUnicode = false }: EmojiGridPr
             transition={{ duration: 0.3 }}
             layout
           >
-            <EmojiCard emoji={emoji} showUnicode={showUnicode} />
+            <EmojiCard emoji={emoji} showUnicode={showUnicode} enableDetailLink={!showUnicode} />
           </motion.div>
         ))}
       </AnimatePresence>
