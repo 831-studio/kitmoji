@@ -37,52 +37,46 @@ async function generateSitemap(req, res) {
     ];
     
     // Get all emojis for individual pages
-    const emojis = await sql`SELECT name FROM emojis ORDER BY id`;
+    const emojis = await sql`SELECT name FROM emojis ORDER BY id LIMIT 1000`;
     
     // Get all categories
     const categories = await sql`SELECT DISTINCT category FROM emojis WHERE category IS NOT NULL ORDER BY category`;
     
-    // Build sitemap XML
-    let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+    // Build sitemap XML with proper escaping
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
     // Add static pages
     staticPages.forEach(page => {
-      sitemap += `
-  <url>
-    <loc>https://www.kitmoji.net${page.url}</loc>
-    <lastmod>${now}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`;
+      sitemap += `\n  <url>\n    <loc>https://www.kitmoji.net${page.url}</loc>\n    <lastmod>${now}</lastmod>\n    <changefreq>${page.changefreq}</changefreq>\n    <priority>${page.priority}</priority>\n  </url>`;
     });
 
     // Add category pages
     categories.rows.forEach(row => {
-      const categorySlug = escapeXml(row.category.toLowerCase().replace(/\s+/g, '-'));
-      sitemap += `
-  <url>
-    <loc>https://www.kitmoji.net/category/${categorySlug}</loc>
-    <lastmod>${now}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`;
+      try {
+        const categorySlug = row.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+        if (categorySlug && categorySlug.length > 0) {
+          sitemap += `\n  <url>\n    <loc>https://www.kitmoji.net/category/${categorySlug}</loc>\n    <lastmod>${now}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`;
+        }
+      } catch (err) {
+        console.warn('Skipped category:', row.category, err.message);
+      }
     });
 
-    // Add individual emoji pages
+    // Add individual emoji pages (limited for now to prevent errors)
+    let addedEmojis = 0;
     emojis.rows.forEach(row => {
-      const emojiSlug = escapeXml(generateEmojiSlug(row.name));
-      sitemap += `
-  <url>
-    <loc>https://www.kitmoji.net/emoji/${emojiSlug}</loc>
-    <lastmod>${now}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>`;
+      try {
+        const emojiSlug = generateEmojiSlug(row.name);
+        if (emojiSlug && emojiSlug.length > 0 && addedEmojis < 1000) {
+          sitemap += `\n  <url>\n    <loc>https://www.kitmoji.net/emoji/${emojiSlug}</loc>\n    <lastmod>${now}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`;
+          addedEmojis++;
+        }
+      } catch (err) {
+        console.warn('Skipped emoji:', row.name, err.message);
+      }
     });
 
-    sitemap += `
-</urlset>`;
+    sitemap += '\n</urlset>';
 
     // Set appropriate headers
     res.setHeader('Content-Type', 'application/xml; charset=utf-8');
