@@ -65,7 +65,11 @@ const EmojiCard = ({ emoji, showUnicode = false, enableDetailLink = true }: Emoj
       
       {/* Quick Copy Button */}
       <button
-        onClick={copyEmoji}
+        onClick={(e) => {
+          e.stopPropagation()
+          e.preventDefault()
+          copyEmoji(e)
+        }}
         className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-purple-50"
         title="Copy emoji"
       >

@@ -134,6 +134,7 @@ function PopularEmojis() {
               <button
                 onClick={(e) => {
                   e.preventDefault()
+                  e.stopPropagation()
                   copyEmoji(emoji)
                 }}
                 className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-purple-50"
