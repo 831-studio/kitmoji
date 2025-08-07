@@ -143,7 +143,7 @@ function PopularEmojis() {
           "@type": "WebPage",
           "name": "Most Popular Emojis - Trending Now",
           "description": "Discover the most popular and trending emojis. Copy the most used emojis instantly.",
-          "url": window.location.href,
+          "url": typeof window !== 'undefined' ? window.location.href : '',
           "mainEntity": {
             "@type": "ItemList",
             "numberOfItems": popularEmojis.length,
@@ -154,7 +154,7 @@ function PopularEmojis() {
                 "@type": "Thing",
                 "name": emoji.name,
                 "identifier": emoji.unicode,
-                "description": `#${emoji.rank} most popular emoji - ${emoji.name}`,
+                "description": `#${index + 1} most popular emoji - ${emoji.name}`,
                 "category": emoji.category
               }
             }))
