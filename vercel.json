@@ -1,42 +1,15 @@
 {
-  "version": 2,
-  "builds": [
+  "functions": {
+    "server/postgres-index.js": {
+      "runtime": "@vercel/node@20.x"
+    }
+  },
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    },
-    {
-      "src": "server/postgres-index.js",
-      "use": "@vercel/node"
+      "source": "/api/(.*)",
+      "destination": "/server/postgres-index.js"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/server/postgres-index.js"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/dist/assets/$1"
-    },
-    {
-      "src": "/.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|map)$",
-      "dest": "/dist/$0"
-    },
-    {
-      "src": "/sitemap\\.xml$",
-      "dest": "/dist/sitemap.xml"
-    },
-    {
-      "src": "/robots\\.txt$",
-      "dest": "/dist/robots.txt"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/index.html"
-    }
-  ]
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "dist"
 }
