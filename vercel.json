@@ -1,34 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    },
-    {
-      "src": "server/postgres-index.js",
-      "use": "@vercel/node"
-    }
-  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/server/postgres-index.js"
-    },
-    {
-      "source": "/sitemap.xml",
-      "destination": "/dist/sitemap.xml"
-    },
-    {
-      "source": "/robots.txt",
-      "destination": "/dist/robots.txt"
+      "destination": "/api"
     },
     {
       "source": "/(.*)",
-      "destination": "/dist/index.html"
+      "destination": "/index.html"
     }
   ]
 }
