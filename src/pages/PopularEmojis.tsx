@@ -1,19 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Copy, ExternalLink } from 'lucide-react'
 import { Emoji } from '../types/emoji'
-import { generateEmojiSlug } from '../utils/emojiUtils'
-
-interface PopularEmoji extends Emoji {
-  rank: number
-  usage_trend: 'up' | 'down' | 'stable'
-}
+import EmojiGrid from '../components/EmojiGrid'
 
 function PopularEmojis() {
-  const [popularEmojis, setPopularEmojis] = useState<PopularEmoji[]>([])
+  const [popularEmojis, setPopularEmojis] = useState<Emoji[]>([])
   const [loading, setLoading] = useState(true)
-  const [copiedId, setCopiedId] = useState<number | null>(null)
 
   useEffect(() => {
     document.title = 'Most Popular Emojis - Trending Now | Kitmoji'
@@ -43,15 +36,7 @@ function PopularEmojis() {
     try {
       const response = await fetch('/api/emojis/popular')
       const data = await response.json()
-      
-      // Add rank and mock trend data for popular emojis
-      const popularWithRanks: PopularEmoji[] = data.map((emoji: Emoji, index: number) => ({
-        ...emoji,
-        rank: index + 1,
-        usage_trend: index < 5 ? 'up' : index < 10 ? 'stable' : 'down' as 'up' | 'down' | 'stable'
-      }))
-      
-      setPopularEmojis(popularWithRanks)
+      setPopularEmojis(data)
     } catch (error) {
       console.error('Error fetching popular emojis:', error)
     } finally {
@@ -59,23 +44,6 @@ function PopularEmojis() {
     }
   }
 
-  const copyEmoji = async (emoji: Emoji) => {
-    try {
-      await navigator.clipboard.writeText(emoji.emoji)
-      setCopiedId(emoji.id)
-      setTimeout(() => setCopiedId(null), 2000)
-    } catch (error) {
-      // Fallback for older browsers
-      const textArea = document.createElement('textarea')
-      textArea.value = emoji.emoji
-      document.body.appendChild(textArea)
-      textArea.select()
-      document.execCommand('copy')
-      document.body.removeChild(textArea)
-      setCopiedId(emoji.id)
-      setTimeout(() => setCopiedId(null), 2000)
-    }
-  }
 
 
   if (loading) {
@@ -109,64 +77,9 @@ function PopularEmojis() {
         </p>
       </div>
 
-      {/* Popular Emojis Grid - Same as Home Page */}
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-3 mb-12">
-        {popularEmojis.map((emoji, index) => {
-          const emojiSlug = generateEmojiSlug(emoji.name)
-          return (
-            <motion.div
-              key={emoji.id}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.05 }}
-              className="bg-white rounded-lg p-4 cursor-pointer group relative border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 h-full"
-            >
-              <Link to={`/emoji/${emojiSlug}`} className="text-center flex flex-col h-full">
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                  {emoji.emoji}
-                </div>
-                <h3 className="text-gray-600 text-sm mb-1 capitalize line-clamp-2 min-h-[2.5rem] flex items-center justify-center">
-                  {emoji.name}
-                </h3>
-              </Link>
-              
-              {/* Copy button like home page */}
-              <button
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  copyEmoji(emoji)
-                }}
-                className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-purple-50"
-                title="Copy emoji"
-              >
-                {copiedId === emoji.id ? (
-                  <div className="w-4 h-4 bg-green-500 rounded-full" />
-                ) : (
-                  <Copy className="w-4 h-4 text-gray-600" />
-                )}
-              </button>
-
-              {/* Link indicator like home page */}
-              <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="bg-purple-500 text-white rounded-full p-1.5 shadow-lg">
-                  <ExternalLink className="w-3 h-3" />
-                </div>
-              </div>
-              
-              {copiedId === emoji.id && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-3 py-1 rounded-full text-sm"
-                >
-                  Copied!
-                </motion.div>
-              )}
-            </motion.div>
-          )
-        })}
+      {/* Popular Emojis Grid - Using same component as Home Page */}
+      <div className="mb-12">
+        <EmojiGrid emojis={popularEmojis} loading={loading} />
       </div>
 
 
