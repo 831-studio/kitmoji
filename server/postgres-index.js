@@ -49,7 +49,10 @@ app.get('/api/emojis/popular', async (req, res) => {
     `;
     
     const result = await sql.query(query, [...popularEmojis, ...popularEmojis]);
-    res.json(result.rows);
+    res.json({ 
+      emojis: result.rows,
+      total: result.rows.length 
+    });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

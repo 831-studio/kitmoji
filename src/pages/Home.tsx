@@ -63,8 +63,8 @@ const Home = () => {
     try {
       setPopularLoading(true)
       const response = await fetch('/api/emojis/popular')
-      const data: Emoji[] = await response.json()
-      setPopularEmojis(data)
+      const data = await response.json()
+      setPopularEmojis(data.emojis || [])
     } catch (error) {
       console.error('Error fetching popular emojis:', error)
     } finally {
