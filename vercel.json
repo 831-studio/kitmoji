@@ -19,8 +19,20 @@
       "dest": "/server/postgres-index.js"
     },
     {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
-      "dest": "/dist/$1"
+      "src": "/assets/(.*)",
+      "dest": "/dist/assets/$1"
+    },
+    {
+      "src": "/.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|map)$",
+      "dest": "/dist/$0"
+    },
+    {
+      "src": "/sitemap\\.xml$",
+      "dest": "/dist/sitemap.xml"
+    },
+    {
+      "src": "/robots\\.txt$",
+      "dest": "/dist/robots.txt"
     },
     {
       "src": "/(.*)",
