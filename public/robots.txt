@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.kitmoji.net/sitemap.xml
+Sitemap: https://kitmoji.net/sitemap.xml

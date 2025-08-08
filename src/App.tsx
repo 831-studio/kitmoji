@@ -9,8 +9,12 @@ import CategoryPage from './pages/CategoryPage'
 import AllEmojis from './pages/AllEmojis'
 import PopularEmojis from './pages/PopularEmojis'
 import NewEmojis from './pages/NewEmojis'
+import { useCanonicalUrl } from './hooks/useCanonicalUrl'
 
 function App() {
+  // Set up canonical URLs for all pages
+  useCanonicalUrl();
+
   return (
     <div className="min-h-screen">
       <Header />

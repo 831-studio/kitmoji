@@ -12,35 +12,35 @@ const pool = new Pool({
 async function generateStaticSitemap() {
   const now = new Date().toISOString();
   
-  // Start with static pages
+  // Start with static pages - using canonical domain without www
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.kitmoji.net/</loc>
+    <loc>https://kitmoji.net/</loc>
     <lastmod>${now}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.kitmoji.net/unicode</loc>
+    <loc>https://kitmoji.net/unicode</loc>
     <lastmod>${now}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kitmoji.net/all-emojis</loc>
+    <loc>https://kitmoji.net/all-emojis</loc>
     <lastmod>${now}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kitmoji.net/popular-emojis</loc>
+    <loc>https://kitmoji.net/popular-emojis</loc>
     <lastmod>${now}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kitmoji.net/new-emojis</loc>
+    <loc>https://kitmoji.net/new-emojis</loc>
     <lastmod>${now}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -66,7 +66,7 @@ async function generateStaticSitemap() {
       if (slug) { // Only add if slug is valid
         sitemap += `
   <url>
-    <loc>https://www.kitmoji.net/emoji/${slug}</loc>
+    <loc>https://kitmoji.net/emoji/${slug}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -89,7 +89,7 @@ async function generateStaticSitemap() {
     popularEmojis.forEach(slug => {
       sitemap += `
   <url>
-    <loc>https://www.kitmoji.net/emoji/${slug}</loc>
+    <loc>https://kitmoji.net/emoji/${slug}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -106,7 +106,7 @@ async function generateStaticSitemap() {
   categories.forEach(category => {
     sitemap += `
   <url>
-    <loc>https://www.kitmoji.net/category/${category}</loc>
+    <loc>https://kitmoji.net/category/${category}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

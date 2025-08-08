@@ -10,6 +10,28 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
+// Force HTTPS redirect middleware for production
+app.use((req, res, next) => {
+  // Skip in development
+  if (process.env.NODE_ENV !== 'production') {
+    return next();
+  }
+
+  // Check if request is already HTTPS
+  if (req.header('x-forwarded-proto') !== 'https') {
+    const redirectUrl = `https://kitmoji.net${req.url}`;
+    return res.redirect(301, redirectUrl);
+  }
+
+  // Check for www and redirect to non-www
+  if (req.headers.host === 'www.kitmoji.net') {
+    const redirectUrl = `https://kitmoji.net${req.url}`;
+    return res.redirect(301, redirectUrl);
+  }
+
+  next();
+});
+
 // Health check with database info
 app.get('/api/health', async (req, res) => {
   try {
