@@ -10,36 +10,6 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-// Force HTTPS and non-www redirect middleware
-app.use((req, res, next) => {
-  // Skip redirect logic for API health checks
-  if (req.path === '/api/health') {
-    return next();
-  }
-
-  const host = req.headers.host || '';
-  const proto = req.header('x-forwarded-proto') || req.protocol;
-  const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL;
-
-  // In production, handle redirects
-  if (isProduction) {
-    // Redirect www to non-www
-    if (host.startsWith('www.')) {
-      const redirectUrl = `https://kitmoji.net${req.originalUrl || req.url}`;
-      console.log(`Redirecting from ${host} to kitmoji.net`);
-      return res.redirect(301, redirectUrl);
-    }
-
-    // Redirect HTTP to HTTPS
-    if (proto === 'http' && host === 'kitmoji.net') {
-      const redirectUrl = `https://kitmoji.net${req.originalUrl || req.url}`;
-      console.log(`Redirecting from HTTP to HTTPS`);
-      return res.redirect(301, redirectUrl);
-    }
-  }
-
-  next();
-});
 
 // Health check with database info
 app.get('/api/health', async (req, res) => {

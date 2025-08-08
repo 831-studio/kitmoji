@@ -13,19 +13,6 @@
       "use": "@vercel/node"
     }
   ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.kitmoji.net"
-        }
-      ],
-      "destination": "https://kitmoji.net/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/api/(.*)",

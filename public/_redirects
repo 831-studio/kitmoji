@@ -1,9 +1,0 @@
-# Redirect www to non-www
-https://www.kitmoji.net/* https://kitmoji.net/:splat 301!
-http://www.kitmoji.net/* https://kitmoji.net/:splat 301!
-
-# Force HTTPS
-http://kitmoji.net/* https://kitmoji.net/:splat 301!
-
-# API proxy
-/api/* /server/postgres-index.js 200
