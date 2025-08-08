@@ -15,15 +15,15 @@
   ],
   "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "https://kitmoji.net/$1",
-      "permanent": true,
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "www.kitmoji.net"
         }
-      ]
+      ],
+      "destination": "https://kitmoji.net/:path*",
+      "permanent": true
     }
   ],
   "rewrites": [

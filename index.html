@@ -5,6 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/emoji-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Redirect if on wrong domain -->
+    <script>
+      if (window.location.hostname === 'www.kitmoji.net') {
+        window.location.href = 'https://kitmoji.net' + window.location.pathname + window.location.search;
+      } else if (window.location.protocol === 'http:' && window.location.hostname === 'kitmoji.net') {
+        window.location.href = 'https://kitmoji.net' + window.location.pathname + window.location.search;
+      }
+    </script>
+    
     <!-- Primary Meta Tags -->
     <title>Kitmoji - Copy and Paste Emojis | Free Emoji Library</title>
     <meta name="title" content="Kitmoji - Copy and Paste Emojis | Free Emoji Library" />
@@ -12,7 +21,7 @@
     <meta name="keywords" content="emoji, copy paste emoji, unicode emoji, emoji library, emoji collection, free emojis, emoji search, trending emojis, popular emojis" />
     <meta name="author" content="Kitmoji" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.kitmoji.net/" />
+    <link rel="canonical" href="https://kitmoji.net/" />
     
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE" />
@@ -21,15 +30,15 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Kitmoji - Copy and Paste Emojis | Free Emoji Library" />
     <meta property="og:description" content="Copy and paste emojis instantly from our complete Unicode emoji library. Search, browse by category, and discover trending emojis." />
-    <meta property="og:image" content="https://www.kitmoji.net/emoji-icon.svg" />
-    <meta property="og:url" content="https://www.kitmoji.net/" />
+    <meta property="og:image" content="https://kitmoji.net/emoji-icon.svg" />
+    <meta property="og:url" content="https://kitmoji.net/" />
     <meta property="og:site_name" content="Kitmoji" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Kitmoji - Copy and Paste Emojis | Free Emoji Library" />
     <meta name="twitter:description" content="Copy and paste emojis instantly from our complete Unicode emoji library. Search, browse by category, and discover trending emojis." />
-    <meta name="twitter:image" content="https://www.kitmoji.net/emoji-icon.svg" />
+    <meta name="twitter:image" content="https://kitmoji.net/emoji-icon.svg" />
     <meta name="twitter:site" content="@kitmoji" />
     
     <!-- Additional SEO -->
@@ -50,7 +59,7 @@
       "name": "Kitmoji",
       "alternateName": "Kitmoji Emoji Library",
       "description": "Copy and paste emojis instantly from our complete Unicode emoji library. Search, browse by category, and discover trending emojis.",
-      "url": "https://www.kitmoji.net/",
+      "url": "https://kitmoji.net/",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "Any",
       "browserRequirements": "Modern web browser with JavaScript support",
@@ -89,18 +98,18 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Kitmoji",
-      "url": "https://www.kitmoji.net/",
+      "url": "https://kitmoji.net/",
       "description": "The fastest way to copy and paste emojis. Complete Unicode emoji library with search and categories.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://www.kitmoji.net/?search={search_term_string}"
+          "urlTemplate": "https://kitmoji.net/?search={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       },
       "sameAs": [
-        "https://www.kitmoji.net/"
+        "https://kitmoji.net/"
       ]
     }
     </script>
