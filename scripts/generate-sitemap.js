@@ -97,10 +97,10 @@ async function generateStaticSitemap() {
     });
   }
 
-  // Add category pages
+  // Add category pages (only categories that exist in database)
   const categories = [
     'smileys-emotion', 'people-body', 'animals-nature', 'food-drink',
-    'travel-places', 'activities', 'objects', 'symbols', 'flags'
+    'travel-places', 'activities', 'objects'
   ];
 
   categories.forEach(category => {

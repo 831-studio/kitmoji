@@ -6,9 +6,7 @@ export const CATEGORY_MAP: Record<string, string> = {
   'food-drink': 'Food & Drink',
   'travel-places': 'Travel & Places',
   'activities': 'Activities',
-  'objects': 'Objects',
-  'symbols': 'Symbols',
-  'flags': 'Flags'
+  'objects': 'Objects'
 };
 
 export const getCategoryFromSlug = (slug: string): string => {
