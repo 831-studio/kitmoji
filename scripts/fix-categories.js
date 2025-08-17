@@ -1,6 +1,7 @@
 // Comprehensive script to fix categories
 const { fixSymbolsCategory } = require('./fix-symbols-category');
 const { addAllFlags } = require('./add-all-flags');
+const { fixRedHeart } = require('./fix-red-heart');
 
 async function fixAllCategories() {
   console.log('🔧 Starting comprehensive category fixes...');
@@ -9,7 +10,7 @@ async function fixAllCategories() {
     // Set a reasonable timeout for the entire process
     const timeout = setTimeout(() => {
       console.log('⏰ Category fixes taking too long - this is okay, continuing with build...');
-    }, 30000); // 30 seconds
+    }, 45000); // 45 seconds
     
     // Fix Symbols category (move hearts from Smileys & Emotion to Symbols)
     console.log('📝 Step 1: Fixing Symbols category...');
@@ -18,6 +19,10 @@ async function fixAllCategories() {
     // Add ALL Flags category and flag emojis (195+ country flags)  
     console.log('🏁 Step 2: Adding Flags category...');
     await addAllFlags();
+    
+    // Fix red heart emoji display issue
+    console.log('❤️ Step 3: Fixing red heart emoji...');
+    await fixRedHeart();
     
     clearTimeout(timeout);
     console.log('🎉 All category fixes completed successfully!');
