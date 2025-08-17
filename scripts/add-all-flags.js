@@ -60,7 +60,7 @@ const allFlags = [
   { emoji: '🇨🇫', name: 'flag: Central African Republic', keywords: 'central african republic,flag', unicode: '1F1E8 1F1EB' },
   { emoji: '🇨🇬', name: 'flag: Congo - Brazzaville', keywords: 'congo,brazzaville,republic,flag', unicode: '1F1E8 1F1EC' },
   { emoji: '🇨🇭', name: 'flag: Switzerland', keywords: 'switzerland,flag', unicode: '1F1E8 1F1ED' },
-  { emoji: '🇨🇮', name: 'flag: Côte d'Ivoire', keywords: 'cote divoire,ivory coast,flag', unicode: '1F1E8 1F1EE' },
+  { emoji: '🇨🇮', name: 'flag: Côte d\'Ivoire', keywords: 'cote divoire,ivory coast,flag', unicode: '1F1E8 1F1EE' },
   { emoji: '🇨🇰', name: 'flag: Cook Islands', keywords: 'cook islands,flag', unicode: '1F1E8 1F1F0' },
   { emoji: '🇨🇱', name: 'flag: Chile', keywords: 'chile,flag', unicode: '1F1E8 1F1F1' },
   { emoji: '🇨🇲', name: 'flag: Cameroon', keywords: 'cameroon,flag', unicode: '1F1E8 1F1F2' },
