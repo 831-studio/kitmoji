@@ -233,6 +233,16 @@ app.get('/api/emoji/:name', async (req, res) => {
         }
       }
       
+      // Handle flag patterns: "flag-australia" -> "flag: Australia"
+      const flagPattern = /^flag-(.+)$/;
+      const flagMatch = slug.match(flagPattern);
+      if (flagMatch) {
+        const countryName = flagMatch[1].replace(/-/g, ' ');
+        // Title case the country name
+        const titleCaseCountry = countryName.replace(/\b\w/g, l => l.toUpperCase());
+        variants.push(`flag: ${titleCaseCountry}`);
+      }
+      
       return variants;
     }
     
