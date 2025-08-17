@@ -49,12 +49,12 @@ async function generateStaticSitemap() {
   try {
     // Query all emojis from database and generate URL slugs
     const client = await pool.connect();
-    const result = await client.query('SELECT name FROM emojis ORDER BY name LIMIT 1000'); // Limit to avoid timeouts
+    const result = await client.query('SELECT name FROM emojis ORDER BY name LIMIT 5000'); // Increased limit for all emojis
     
     console.log(`📊 Found ${result.rows.length} emojis in database`);
     
-    // Add emoji pages (limit to avoid oversized sitemap)
-    const maxEmojis = Math.min(result.rows.length, 500); // Limit sitemap size
+    // Add emoji pages (increased limit for comprehensive sitemap)
+    const maxEmojis = Math.min(result.rows.length, 4000); // Include most emojis
     for (let i = 0; i < maxEmojis; i++) {
       const row = result.rows[i];
       // Generate URL-friendly slug from emoji name
