@@ -154,6 +154,15 @@ app.get('/api/emoji/:name', async (req, res) => {
       const basic = slug.replace(/-/g, ' ');
       variants.push(basic);
       
+      // Keep original with hyphens (for names like "T-Rex", "X-ray", etc.)
+      variants.push(slug);
+      
+      // Title case version with hyphens (t-rex -> T-Rex)
+      const titleCaseHyphen = slug.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+      ).join('-');
+      variants.push(titleCaseHyphen);
+      
       // Handle compound words that might have internal hyphens
       // "smiling-face-with-heart-eyes" could be "smiling face with heart-eyes"
       const words = slug.split('-');

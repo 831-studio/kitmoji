@@ -100,7 +100,7 @@ async function generateStaticSitemap() {
   // Add category pages
   const categories = [
     'smileys-emotion', 'people-body', 'animals-nature', 'food-drink',
-    'travel-places', 'activities', 'objects', 'symbols'
+    'travel-places', 'activities', 'objects', 'symbols', 'flags'
   ];
 
   categories.forEach(category => {
