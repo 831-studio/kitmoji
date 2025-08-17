@@ -1,6 +1,6 @@
 // Comprehensive script to fix categories
 const { fixSymbolsCategory } = require('./fix-symbols-category');
-const { addFlagsCategory } = require('./add-flags-category');
+const { addAllFlags } = require('./add-all-flags');
 
 async function fixAllCategories() {
   console.log('🔧 Starting comprehensive category fixes...');
@@ -9,8 +9,8 @@ async function fixAllCategories() {
     // Fix Symbols category (move hearts from Smileys & Emotion to Symbols)
     await fixSymbolsCategory();
     
-    // Add Flags category and flag emojis
-    await addFlagsCategory();
+    // Add ALL Flags category and flag emojis (195+ country flags)
+    await addAllFlags();
     
     console.log('🎉 All category fixes completed successfully!');
     
