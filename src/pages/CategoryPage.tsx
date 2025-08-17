@@ -5,6 +5,7 @@ import { Grid3x3, List } from 'lucide-react'
 import { Emoji, EmojiResponse } from '../types/emoji'
 import LoadMoreButton from '../components/LoadMoreButton'
 import { generateEmojiSlug } from '../utils/emojiUtils'
+import { getCategoryFromSlug } from '../utils/categoryUtils'
 
 function CategoryPage() {
   const { categoryName } = useParams<{ categoryName: string }>()
@@ -26,8 +27,8 @@ function CategoryPage() {
         setPage(1)
         setEmojis([])
         
-        // Convert URL slug back to category name
-        const searchCategory = categoryName.replace(/-/g, ' ')
+        // Convert URL slug back to category name with proper formatting
+        const searchCategory = getCategoryFromSlug(categoryName)
         
         const response = await fetch(`/api/emojis?category=${encodeURIComponent(searchCategory)}&page=1&limit=48`)
         const data: EmojiResponse = await response.json()
@@ -82,7 +83,8 @@ function CategoryPage() {
     try {
       setLoadingMore(true)
       const nextPage = page + 1
-      const searchCategory = categoryName.replace(/-/g, ' ')
+      
+      const searchCategory = getCategoryFromSlug(categoryName)
       
       const response = await fetch(`/api/emojis?category=${encodeURIComponent(searchCategory)}&page=${nextPage}&limit=48`)
       const data: EmojiResponse = await response.json()
