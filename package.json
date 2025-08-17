@@ -10,8 +10,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "setup-db": "node server/setup-database.js",
+    "fix-categories": "node scripts/fix-categories.js",
     "start": "node server/postgres-index.js",
-    "vercel-build": "node scripts/setup-vercel-postgres.js && node scripts/fix-categories.js && node scripts/generate-sitemap.js && tsc && vite build && cp public/sitemap.xml dist/ && cp public/robots.txt dist/"
+    "vercel-build": "node scripts/setup-vercel-postgres.js && node scripts/generate-sitemap.js && tsc && vite build && cp public/sitemap.xml dist/ && cp public/robots.txt dist/"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",

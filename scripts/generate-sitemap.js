@@ -49,12 +49,14 @@ async function generateStaticSitemap() {
   try {
     // Query all emojis from database and generate URL slugs
     const client = await pool.connect();
-    const result = await client.query('SELECT name FROM emojis ORDER BY name');
+    const result = await client.query('SELECT name FROM emojis ORDER BY name LIMIT 1000'); // Limit to avoid timeouts
     
     console.log(`📊 Found ${result.rows.length} emojis in database`);
     
-    // Add all emoji pages
-    result.rows.forEach(row => {
+    // Add emoji pages (limit to avoid oversized sitemap)
+    const maxEmojis = Math.min(result.rows.length, 500); // Limit sitemap size
+    for (let i = 0; i < maxEmojis; i++) {
+      const row = result.rows[i];
       // Generate URL-friendly slug from emoji name
       const slug = row.name
         .toLowerCase()
@@ -63,7 +65,7 @@ async function generateStaticSitemap() {
         .replace(/-+/g, '-')      // Replace multiple hyphens with single
         .trim();
       
-      if (slug) { // Only add if slug is valid
+      if (slug && slug.length > 0) { // Only add if slug is valid
         sitemap += `
   <url>
     <loc>https://kitmoji.net/emoji/${slug}</loc>
@@ -72,7 +74,7 @@ async function generateStaticSitemap() {
     <priority>0.7</priority>
   </url>`;
       }
-    });
+    }
     
     client.release();
     
