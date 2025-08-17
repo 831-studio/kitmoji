@@ -189,21 +189,39 @@ app.get('/api/emoji/:name', async (req, res) => {
       }
       
       // Handle skin tone patterns: "artist-dark-skin-tone" -> "artist: dark skin tone"
-      const skinTonePattern = /^(.+)-(light|medium-light|medium|medium-dark|dark)-skin-tone$/;
-      const skinToneMatch = slug.match(skinTonePattern);
-      if (skinToneMatch) {
-        const baseName = skinToneMatch[1].replace(/-/g, ' ');
-        const skinTone = skinToneMatch[2];
+      // Handle compound skin tones first, then single ones
+      const compoundSkinTonePattern = /^(.+)-(medium-light|medium-dark)-skin-tone$/;
+      const compoundSkinToneMatch = slug.match(compoundSkinTonePattern);
+      if (compoundSkinToneMatch) {
+        const baseName = compoundSkinToneMatch[1].replace(/-/g, ' ');
+        const skinTone = compoundSkinToneMatch[2];
         variants.push(`${baseName}: ${skinTone} skin tone`);
+      } else {
+        // Handle single skin tones
+        const skinTonePattern = /^(.+)-(light|medium|dark)-skin-tone$/;
+        const skinToneMatch = slug.match(skinTonePattern);
+        if (skinToneMatch) {
+          const baseName = skinToneMatch[1].replace(/-/g, ' ');
+          const skinTone = skinToneMatch[2];
+          variants.push(`${baseName}: ${skinTone} skin tone`);
+        }
       }
       
-      // Handle other colon patterns
-      const colonPattern = /^(.+)-(light|medium-light|medium|medium-dark|dark)$/;
-      const colonMatch = slug.match(colonPattern);
-      if (colonMatch) {
-        const baseName = colonMatch[1].replace(/-/g, ' ');
-        const modifier = colonMatch[2];
+      // Handle other colon patterns (without skin-tone suffix)
+      const compoundColonPattern = /^(.+)-(medium-light|medium-dark)$/;
+      const compoundColonMatch = slug.match(compoundColonPattern);
+      if (compoundColonMatch) {
+        const baseName = compoundColonMatch[1].replace(/-/g, ' ');
+        const modifier = compoundColonMatch[2];
         variants.push(`${baseName}: ${modifier}`);
+      } else {
+        const colonPattern = /^(.+)-(light|medium|dark)$/;
+        const colonMatch = slug.match(colonPattern);
+        if (colonMatch) {
+          const baseName = colonMatch[1].replace(/-/g, ' ');
+          const modifier = colonMatch[2];
+          variants.push(`${baseName}: ${modifier}`);
+        }
       }
       
       return variants;
