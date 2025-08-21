@@ -163,6 +163,18 @@ app.get('/api/emoji/:name', async (req, res) => {
       ).join('-');
       variants.push(titleCaseHyphen);
       
+      // Handle compound phrases with partial hyphens: "hear-no-evil-monkey" -> "hear-no-evil monkey"
+      // This is for emojis where some parts stay hyphenated in the database
+      if (slug.includes('-') && slug.split('-').length > 2) {
+        const words = slug.split('-');
+        // Try combinations where the last word is separated by space
+        if (words.length >= 3) {
+          const lastWord = words.pop();
+          const restWithHyphens = words.join('-');
+          variants.push(`${restWithHyphens} ${lastWord}`);
+        }
+      }
+      
       // Handle compound words that might have internal hyphens
       // "smiling-face-with-heart-eyes" could be "smiling face with heart-eyes"
       const words = slug.split('-');
