@@ -309,7 +309,7 @@ function AllEmojis() {
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Browse by Category</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {categories.slice(0, 8).map((category) => {
-            const categorySlug = category.toLowerCase().replace(/\s+/g, '-')
+            const categorySlug = category.toLowerCase().replace(/[&\s]+/g, '-')
             return (
               <Link
                 key={category}
@@ -354,7 +354,7 @@ function AllEmojis() {
                 "@type": "Thing",
                 "name": `${category} Emojis`,
                 "description": `Collection of ${category.toLowerCase()} emoji symbols`,
-                "url": `${window.location.origin}/category/${category.toLowerCase().replace(/\s+/g, '-')}`
+                "url": `${window.location.origin}/category/${category.toLowerCase().replace(/[&\s]+/g, '-')}`
               }
             }))
           }

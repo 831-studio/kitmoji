@@ -209,7 +209,7 @@ function EmojiDetail() {
       <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
         <Link to="/" className="hover:text-purple-600 transition-colors">Home</Link>
         <span>/</span>
-        <Link to={`/category/${emoji.category.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-purple-600 transition-colors">
+        <Link to={`/category/${emoji.category.toLowerCase().replace(/[&\s]+/g, '-')}`} className="hover:text-purple-600 transition-colors">
           {emoji.category}
         </Link>
         <span>/</span>
